@@ -18,7 +18,7 @@ window.changelogList = [
 
 // Post Rilasciati
     {
-        title: '26.2 RC 1 - Draft',
+        title: 'JE-26.2-7.3.1-Voidblock:RELEASE_CANDIDATE-1 - Draft',
         date: '???',
         image: 'images/posts/Voidblock/7.3.0/je-26.1-26.2-7.3.1_rc1.png',
         file: 'Voidblock/7.3.0/je-26.1-26.2-7.3.1_rc1.md',
