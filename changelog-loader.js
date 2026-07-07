@@ -1,4 +1,18 @@
-// Lista dei changelog disponibili (accessibile globalmente)
+// ===================================
+// CONFIGURAZIONE DEL POST IN EVIDENZA
+// ===================================
+
+// Qui puoi scegliere quale post in evidenzia mostrare in homepage.
+window.featuredPostConfig = {
+    file: 'Voidblock/7.3.0/je-26.1-26.2-7.3.1_rc1.md',
+    description: 'Il Chaos Cubed Drop è arrivato: esplora la nuova isola sulfur e usa i sulfur cube per creare minigiochi!!!'
+};
+
+// ===================================
+// LISTA DEI CHANGELOG DISPONIBILI
+// ===================================
+
+// Ogni oggetto rappresenta un post o un changelog che può essere visualizzato nella griglia e nella homepage.
 window.changelogList = [
 
 
@@ -343,13 +357,19 @@ window.changelogList = [
     }
 ];
 
-// Funzione per caricare la lista dei changelog nella griglia
+// ===================================
+// CARICAMENTO DELLA LISTA DEI CHANGELOG
+// ===================================
+
+// Questa funzione inizializza la homepage: carica la griglia, imposta i filtri e mostra il post in evidenza.
 function loadChangelogList() {
     const changelogGrid = document.getElementById('changelog-grid');
+    if (!changelogGrid) return;
+
     changelogGrid.innerHTML = ''; // Pulisci la griglia
     
     // Filtra i changelog visibili
-    const visibleChangelogs = window.changelogList.filter(changelog => changelog.visible);
+    const visibleChangelogs = getVisibleChangelogs();
     
     // Crea una card per ogni changelog visibile
     visibleChangelogs.forEach(changelog => {
@@ -362,15 +382,79 @@ function loadChangelogList() {
     
     // Genera il calendario
     generateChangelogCalendar();
+
+    // Mostra il post in evidenza nella homepage
+    renderFeaturedPost();
 }
 
-// Funzione per troncare il testo
+// ===================================
+// FUNZIONI DI UTILITÀ
+// ===================================
+
+// Funzione per troncare il testo in modo pulito nelle card.
 function truncateText(text, maxLength = 60) {
     if (text.length <= maxLength) return text;
     return text.substring(0, maxLength - 3) + '...';
 }
 
-// Funzione per creare una singola card del changelog
+function getVisibleChangelogs() {
+    return window.changelogList.filter(changelog => changelog.visible);
+}
+
+// Funzione per trovare il changelog da mostrare come post in evidenza nella homepage.
+function getFeaturedChangelog() {
+    const targetFile = window.featuredPostConfig?.file;
+    const visibleChangelogs = getVisibleChangelogs();
+
+    if (targetFile) {
+        const directMatch = visibleChangelogs.find(changelog => changelog.file === targetFile);
+        if (directMatch) return directMatch;
+    }
+
+    return visibleChangelogs.find(changelog => changelog.file && changelog.file !== 'changelog-template.md') || null;
+}
+
+// Funzione per costruire il blocco del post in evidenza nella homepage.
+function renderFeaturedPost() {
+    const container = document.getElementById('featured-post-section');
+    if (!container) return;
+
+    const featured = getFeaturedChangelog();
+    if (!featured) {
+        container.innerHTML = '';
+        return;
+    }
+
+    const defaultImage = 'https://placehold.co/600x400/1a1a1a/ffffff/png?text=No+Image';
+    const tagsHtml = featured.tags ?
+        `<div class="featured-post-tags">
+            ${featured.tags.slice(0, 4).map(tag => `<span class="tag ${tag}">${tag}</span>`).join('')}
+        </div>` : '';
+
+    container.innerHTML = `
+        <a class="featured-post-card" href="view-changelog.html?file=${featured.file}">
+            <div class="featured-badge">Ultima versione disponibile</div>
+            <div class="featured-post-content">
+                <div class="featured-post-image">
+                    <img src="${featured.image || defaultImage}" alt="${featured.title}" onerror="this.src='${defaultImage}'">
+                </div>
+                <div class="featured-post-info">
+                    <h3>${featured.title}</h3>
+                    <p class="featured-post-date">📅 ${featured.date}</p>
+                    <p class="featured-post-description">${window.featuredPostConfig?.description || ''}</p>
+                    ${tagsHtml}
+                    <p class="featured-post-cta">Clicca qui per vedere il changelog.</p>
+                </div>
+            </div>
+        </a>
+    `;
+}
+
+// ===================================
+// CREAZIONE DELLE CARD DEI CHANGELOG
+// ===================================
+
+// Funzione per creare una singola card del changelog nella griglia principale.
 function createChangelogCard(changelog) {
     const card = document.createElement('a');
     card.href = `view-changelog.html?file=${changelog.file}`; // Link alla pagina del changelog
@@ -423,17 +507,11 @@ function createChangelogCard(changelog) {
     return card;
 }
 
-// Funzione per filtrare i changelog per versione
-function filterChangelogsByVersion(version) {
-    return window.changelogList.filter(changelog => 
-        changelog.title.toLowerCase().includes(version.toLowerCase())
-    );
-}
-
-// Funzione per cercare nei changelog
+// Funzione per cercare tra i changelog usando la barra di ricerca.
 function searchChangelogs(searchTerm) {
-    const activeTag = document.querySelector('.tag-filter.active').dataset.tag;
-    let results = window.changelogList.filter(changelog => changelog.visible); // Filtra prima per visibilità
+    const activeTagElement = document.querySelector('.tag-filter.active');
+    const activeTag = activeTagElement ? activeTagElement.dataset.tag : 'all';
+    let results = getVisibleChangelogs();
     
     // Applica prima il filtro per tag se non è "all"
     if (activeTag !== 'all') {
@@ -449,7 +527,7 @@ function searchChangelogs(searchTerm) {
     refreshChangelogGrid(results);
 }
 
-// Funzione per aggiornare la griglia dei changelog
+// Funzione per aggiornare la griglia dei changelog dopo un filtro o una ricerca.
 function refreshChangelogGrid(changelogs) {
     const grid = document.getElementById('changelog-grid');
     grid.innerHTML = '';
@@ -459,24 +537,23 @@ function refreshChangelogGrid(changelogs) {
     });
 }
 
-// Funzione per copiare il link del changelog
+// Funzione per copiare il link diretto di un changelog negli appunti.
 function copyChangelogLink(file) {
     const url = `${window.location.origin}/view-changelog.html?file=${file}`;
     navigator.clipboard.writeText(url)
         .then(() => alert('Link copiato negli appunti!'));
 }
 
-// Funzione per filtrare i changelog per tag
+// Funzione per filtrare i changelog in base al tag selezionato.
 function filterChangelogsByTag(tag) {
-    const results = window.changelogList
-        .filter(changelog => changelog.visible) // Filtra prima per visibilità
+    const results = getVisibleChangelogs()
         .filter(changelog => 
             changelog.tags && changelog.tags.includes(tag)
         );
     refreshChangelogGrid(results);
 }
 
-// Funzione per inizializzare i filtri tag
+// Funzione per inizializzare i pulsanti dei filtri tag.
 function initializeTagFilters() {
     const tagFilters = document.querySelectorAll('.tag-filter');
     tagFilters.forEach(filter => {
@@ -488,7 +565,7 @@ function initializeTagFilters() {
             
             const tag = filter.dataset.tag;
             if (tag === 'all') {
-                refreshChangelogGrid(window.changelogList.filter(changelog => changelog.visible));
+                refreshChangelogGrid(getVisibleChangelogs());
             } else {
                 filterChangelogsByTag(tag);
             }
@@ -496,7 +573,11 @@ function initializeTagFilters() {
     });
 }
 
-// Funzione aggiornata per generare il calendario
+// ===================================
+// CALENDARIO DEI CHANGELOG
+// ===================================
+
+// Funzione per generare il calendario dei changelog nella sidebar.
 function generateChangelogCalendar() {
     const calendarContainer = document.querySelector('.changelog-calendar');
     if (!calendarContainer) return;
@@ -552,7 +633,7 @@ function generateChangelogCalendar() {
     });
 }
 
-// Funzione aggiornata per raggruppare i changelog
+// Funzione per raggruppare i changelog per anno e mese nel calendario.
 function groupChangelogsByYearMonth(changelogs) {
     return changelogs
         .filter(changelog => changelog.visible) // Filtra prima per visibilità
@@ -584,7 +665,7 @@ function groupChangelogsByYearMonth(changelogs) {
     }, {});
 }
 
-// Funzione di utilità per ottenere il nome del mese
+// Funzione di utilità per ottenere il nome del mese dal suo indice numerico.
 function getMonthName(monthIndex) {
     const months = [
         'Gennaio', 'Febbraio', 'Marzo', 'Aprile',
@@ -592,16 +673,6 @@ function getMonthName(monthIndex) {
         'Settembre', 'Ottobre', 'Novembre', 'Dicembre'
     ];
     return months[monthIndex];
-}
-
-// Funzione di utilità per ottenere l'indice del mese
-function getMonthIndex(monthName) {
-    const months = {
-        'Gennaio': 0, 'Febbraio': 1, 'Marzo': 2, 'Aprile': 3,
-        'Maggio': 4, 'Giugno': 5, 'Luglio': 6, 'Agosto': 7,
-        'Settembre': 8, 'Ottobre': 9, 'Novembre': 10, 'Dicembre': 11
-    };
-    return months[monthName];
 }
 
 // Inizializza il caricamento quando il DOM è pronto

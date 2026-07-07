@@ -1305,6 +1305,100 @@ main {
     top: 45%; /* Regolato per allineare meglio i trattini */
 }
 
+.featured-post-section {
+    margin: 2rem 0 0;
+}
+
+.featured-post-card {
+    display: block;
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.97), rgba(24, 24, 24, 0.97));
+    border: 4px solid #7c4dff;
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.featured-post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 42px rgba(124, 77, 255, 0.24);
+}
+
+.featured-badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(124, 77, 255, 0.18);
+    color: #f4e8ff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.featured-post-content {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.featured-post-image {
+    flex: 0 0 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.featured-post-image img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.featured-post-info {
+    flex: 1;
+    text-align: left;
+}
+
+.featured-post-info h3 {
+    margin: 0 0 0.6rem;
+    font-size: 1.25rem;
+    color: #ffffff;
+}
+
+.featured-post-date {
+    margin: 0 0 0.6rem;
+    color: #d8c7ff;
+    font-weight: 600;
+}
+
+.featured-post-description {
+    margin: 0 0 1rem;
+    color: #ffffff;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.featured-post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.featured-post-cta {
+    margin: 0;
+    color: #bbbbbb;
+    font-weight: 700;
+}
+
 .changelog-list {
     background-color: #1a1a1a;
     padding: 2rem;
@@ -1922,6 +2016,23 @@ footer {
         font-size: 2rem;
     }
 
+    .featured-post-card {
+        padding: 1rem;
+    }
+
+    .featured-post-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .featured-post-image {
+        flex-basis: auto;
+    }
+
+    .featured-post-image img {
+        height: 160px;
+    }
+
     .changelog-list {
         padding: 1rem;
         margin-top: 2rem;
@@ -1943,6 +2054,14 @@ footer {
 }
 
 @media (max-width: 480px) {
+    .featured-post-card {
+        padding: 0.9rem;
+    }
+
+    .featured-post-info h3 {
+        font-size: 1.1rem;
+    }
+
     .changelog-list {
         padding: 0.5rem;
     }
