@@ -443,7 +443,7 @@ function renderFeaturedPost() {
                     <p class="featured-post-date">📅 ${featured.date}</p>
                     <p class="featured-post-description">${window.featuredPostConfig?.description || ''}</p>
                     ${tagsHtml}
-                    <p class="featured-post-cta">Clicca qui per vedere il changelog.</p>
+                    <p class="featured-post-cta">Clicca qui per vedere il changelog completo.</p>
                 </div>
             </div>
         </a>
