@@ -160,6 +160,16 @@ function loadTranslateWidget() {
 // Lista delle festività (priorità alta, sovrascrivono eventi (events) e tema default). hanno priorità massima e sovrascrivono tutto.
 const holidays = [
     
+    // Prossimo aggiornamento di Minecraft. Marketing per lo sfondo.
+    {
+        id: 'coming-update',
+        month: 6,
+        startDay: 1,
+        endDay: 31,
+        className: 'coming-update',
+        iconPath: 'images/icons/coming-update/favicon.ico'
+    },
+
     // Christmas
     {
         id: 'christmas',

@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="translate.js"></script>
+    <script defer src="image-optimizer.js"></script>
 </head>
 <body class="index-page">
     <!-- Header con titolo principale -->
@@ -31,6 +32,9 @@
                 <h2>Benvenuto nel sito changelogs delle mie custom maps</h2>
                 <p>Qui potete trovare tutte le modifiche che vengono fatte nelle mie mappe...</p>
             </section>
+
+            <!-- Post Card in evidenza -->
+            <section class="featured-post-section" id="featured-post-section" aria-live="polite"></section>
 
             <!-- Griglia dei changelog -->
             <section class="changelog-list">
@@ -93,6 +97,13 @@
         </aside>
     </div>
 
+    <a class="copilot-badge" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" aria-label="Made by GitHub Copilot">
+        <span class="copilot-badge__icon" aria-hidden="true">
+            <img src="images/icons/github_copilot/githubcopilot.webp" alt="" onerror="this.onerror=null;this.src='images/icons/github_copilot/githubcopilot.png'">
+        </span>
+        <span class="copilot-badge_text">Made by Github Copilot</span>
+    </a>
+
     <!-- Footer con copyright e Link-->
     <footer>
         <div class="footer-content">
@@ -103,29 +114,29 @@
             <h3>Link:</h3>
             <div class="social-icons">
                 <a href="https://github.com/Loweredgames/" class="social-icon" title="GitHub">
-                    <img src="images/social_logo/Github.png" alt="GitHub">
+                    <img src="images/social_logo/Github.webp" alt="GitHub" onerror="this.onerror=null;this.src='images/social_logo/Github.png'">
                 </a>
                 <a href="https://modrinth.com/user/Loweredgames/" class="social-icon" title="Modrinth">
-                    <img src="images/social_logo/Modrinth.png" alt="Modrinth">
+                    <img src="images/social_logo/Modrinth.webp" alt="Modrinth" onerror="this.onerror=null;this.src='images/social_logo/Modrinth.png'">
                 </a>
                 <a href="https://www.planetminecraft.com/member/loweredgames/" class="social-icon" title="PlanetMinecraft">
-                    <img src="images/social_logo/PlanetMinecraft.png" alt="PlanetMinecraft">
+                    <img src="images/social_logo/PlanetMinecraft.webp" alt="PlanetMinecraft" onerror="this.onerror=null;this.src='images/social_logo/PlanetMinecraft.png'">
                 </a>
                 <a href="https://www.curseforge.com/members/loweredgamesdev/projects/" class="social-icon" title="CurseForge">
-                    <img src="images/social_logo/CursedForge.png" alt="CurseForge">
+                    <img src="images/social_logo/CursedForge.webp" alt="CurseForge" onerror="this.onerror=null;this.src='images/social_logo/CursedForge.png'">
                 </a>
                 <a href="https://smithed.net/Loweredgames/" class="social-icon" title="Smithed">
-                    <img src="images/social_logo/Smithed.png" alt="Smithed">
+                    <img src="images/social_logo/Smithed.webp" alt="Smithed" onerror="this.onerror=null;this.src='images/social_logo/Smithed.png'">
                 </a>
                 <a href="https://discord.gg/T6PHxhznJ6" class="social-icon" title="Discord">
-                    <img src="images/social_logo/Discord.png" alt="Discord">
+                    <img src="images/social_logo/Discord.webp" alt="Discord" onerror="this.onerror=null;this.src='images/social_logo/Discord.png'">
                 </a>
                 <a href="https://crowdin.com/profile/" class="social-icon" title="Crowdin">
-                    <img src="images/social_logo/Crowdin.png" alt="Crowdin">
+                    <img src="images/social_logo/Crowdin.webp" alt="Crowdin" onerror="this.onerror=null;this.src='images/social_logo/Crowdin.png'">
                 </a>
             </div>
             <p>&copy; <a href="license.html">LICENZE Loweredgames</a> - Tutti i diritti riservati.</p>
-            <i>Ultimo Aggiornamento: 21.05.2026 - 16:52</i>
+            <i>Ultimo Aggiornamento: 15.07.2026 - 18:25</i>
         </div>
     </footer>
 
@@ -142,22 +153,24 @@
         (function(){
             const arrow = document.getElementById('scroll-arrow');
             const hero = document.querySelector('.hero');
-            const heroTitle = hero ? hero.querySelector('h2') : null;
 
             if (!arrow) return;
 
             function updateArrow() {
-                if (heroTitle) {
-                    const rect = heroTitle.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                let shouldShow = false;
+
+                if (hero) {
+                    const rect = hero.getBoundingClientRect();
                     const showWhenPx = 56;
-                    if (rect.bottom <= showWhenPx) arrow.classList.add('visible');
-                    else arrow.classList.remove('visible');
-                    return;
+                    shouldShow = rect.bottom <= showWhenPx;
+                } else {
+                    shouldShow = scrollTop > 120;
                 }
 
-                // fallback: mostra quando scroll > 120px
-                if ((window.pageYOffset || document.documentElement.scrollTop) > 120) arrow.classList.add('visible');
-                else arrow.classList.remove('visible');
+                arrow.classList.toggle('visible', shouldShow);
+                arrow.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+                arrow.setAttribute('tabindex', shouldShow ? '0' : '-1');
             }
 
             window.addEventListener('scroll', updateArrow, { passive: true });
