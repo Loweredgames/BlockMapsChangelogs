@@ -1722,6 +1722,48 @@ footer {
     border-top: 4px solid #2d2d2d;
 }
 
+.copilot-badge {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1400;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 0.95rem;
+    border-radius: 999px;
+    background: rgba(12, 12, 12, 0.9);
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.copilot-badge:hover,
+.copilot-badge:focus-visible {
+    transform: translateY(-2px);
+    background: rgba(24, 24, 24, 0.96);
+    outline: none;
+}
+
+.copilot-badge_text {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .copilot-badge {
+        right: 0.75rem;
+        bottom: 0.75rem;
+        padding: 0.65rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
 .footer-content {
     display: flex;
     flex-direction: column;
@@ -2408,6 +2450,8 @@ footer {
     box-shadow: 0 6px 18px rgba(0,0,0,0.30);
     cursor: pointer;
     opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transform: translateX(12px);
     transition: opacity 180ms ease, transform 180ms ease, background-color 160ms ease;
     z-index: 1000;
@@ -2415,6 +2459,8 @@ footer {
 }
 #scroll-arrow.visible {
     opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
     transform: translateX(0);
 }
 #scroll-arrow svg { width: 22px; height: 22px; fill: currentColor; }

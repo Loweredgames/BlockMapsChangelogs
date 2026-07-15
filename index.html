@@ -96,6 +96,13 @@
         </aside>
     </div>
 
+    <a class="copilot-badge" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" aria-label="Made by GitHub Copilot">
+        <span class="copilot-badge__icon" aria-hidden="true">
+            <img src="images/icons/github_copilot/githubcopilot.png" alt="">
+        </span>
+        <span class="copilot-badge_text">Made by Github Copilot</span>
+    </a>
+
     <!-- Footer con copyright e Link-->
     <footer>
         <div class="footer-content">
@@ -145,22 +152,24 @@
         (function(){
             const arrow = document.getElementById('scroll-arrow');
             const hero = document.querySelector('.hero');
-            const heroTitle = hero ? hero.querySelector('h2') : null;
 
             if (!arrow) return;
 
             function updateArrow() {
-                if (heroTitle) {
-                    const rect = heroTitle.getBoundingClientRect();
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                let shouldShow = false;
+
+                if (hero) {
+                    const rect = hero.getBoundingClientRect();
                     const showWhenPx = 56;
-                    if (rect.bottom <= showWhenPx) arrow.classList.add('visible');
-                    else arrow.classList.remove('visible');
-                    return;
+                    shouldShow = rect.bottom <= showWhenPx;
+                } else {
+                    shouldShow = scrollTop > 120;
                 }
 
-                // fallback: mostra quando scroll > 120px
-                if ((window.pageYOffset || document.documentElement.scrollTop) > 120) arrow.classList.add('visible');
-                else arrow.classList.remove('visible');
+                arrow.classList.toggle('visible', shouldShow);
+                arrow.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+                arrow.setAttribute('tabindex', shouldShow ? '0' : '-1');
             }
 
             window.addEventListener('scroll', updateArrow, { passive: true });
