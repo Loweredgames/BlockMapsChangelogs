@@ -307,4 +307,4 @@ Etiam in lorem at odio aliquam blandit et eu justo. Praesent ullamcorper venenat
 
 > _**⚠️BUILDING: They are development version and can be unstable, use it at your risk⚠️**_
 
-**Download** (ricordarsi di fare collegamento diretto in GitHub)
+[**Download**] (ricordarsi di fare collegamento diretto in GitHub)

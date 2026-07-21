@@ -19,7 +19,7 @@ window.changelogList = [
 // Post Rilasciati
     {
         title: 'JE-26.2-7.3.1-Voidblock:7.3.1',
-        date: '???',
+        date: '21.07.2026',
         image: 'images/posts/Voidblock/7.3.0/je-26.1-26.2-7.3.1_rc1.png',
         file: 'Voidblock/7.3.0/je-26.1-26.2-7.3.1_stable.md',
         tags: ['stable'],
