@@ -4,7 +4,7 @@
 
 // Qui puoi scegliere quale post in evidenzia mostrare in homepage.
 window.featuredPostConfig = {
-    file: 'Voidblock/7.3.0/je-26.1-26.2-7.3.1_rc1.md',
+    file: 'Voidblock/7.3.0/je-26.1-26.2-7.3.1_stable.md',
     description: 'Il Chaos Cubed Drop è arrivato: esplora la nuova isola sulfur e usa i sulfur cube per creare minigiochi!!!'
 };
 
@@ -17,6 +17,14 @@ window.changelogList = [
 
 
 // Post Rilasciati
+    {
+        title: 'JE-26.2-7.3.1-Voidblock:7.3.1',
+        date: '21.07.2026',
+        image: 'images/posts/Voidblock/7.3.0/je-26.1-26.2-7.3.1_rc1.png',
+        file: 'Voidblock/7.3.0/je-26.1-26.2-7.3.1_stable.md',
+        tags: ['stable'],
+        visible: true
+    },
     {
         title: 'JE-26.2-7.3.1-Voidblock:RELEASE_CANDIDATE-1',
         date: '15.07.2026',
