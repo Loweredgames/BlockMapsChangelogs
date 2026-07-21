@@ -37,4 +37,4 @@
 
 **Full Changelog**: -> (ricordarsi di aggiungere Github versione tag compare)
 
-**Download** -> (ricordarsi di fare collegamento diretto in GitHub)
+[**Download**] -> (ricordarsi di fare collegamento diretto in GitHub)
