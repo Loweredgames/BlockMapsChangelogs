@@ -165,7 +165,7 @@ const holidays = [
         id: 'coming-update',
         month: 6,
         startDay: 1,
-        endDay: 31,
+        endDay: 27,
         className: 'coming-update',
         iconPath: 'images/icons/coming-update/favicon.ico'
     },
