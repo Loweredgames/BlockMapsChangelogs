@@ -11,7 +11,7 @@
 
 ## _misc and other_:
 
-- aggiornata la [licenza della mappa](https://loweredgames.github.io/license.html) (verrà fatto anche nelle mie future mappe).
+- aggiornata la [licenza della mappa](https://Loweredgames.github.io/BlockMapsChangelogs/license.html) (verrà fatto anche nelle mie future mappe).
 
 # Changed
 
@@ -30,7 +30,7 @@
 ## _misc and other_:
 
 - aggiornato il ```pack.mcmeta``` al nuovo formato nel datapack e nel resources pack. adesso la [Voidblock supporta le versioni minori.](https://www.minecraft.net/en-us/article/minecraft-snapshot-25w31a)
-- aggiornata la [licenza della mappa](https://loweredgames.github.io/license.html) (verrà fatto anche nelle mie future mappe).
+- aggiornata la [licenza della mappa](https://Loweredgames.github.io/BlockMapsChangelogs/license.html) (verrà fatto anche nelle mie future mappe).
 
 # Fixed
 
