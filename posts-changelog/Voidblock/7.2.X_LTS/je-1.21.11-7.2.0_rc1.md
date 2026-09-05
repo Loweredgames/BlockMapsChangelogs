@@ -1,4 +1,4 @@
-_[Come ho detto nel precedente post](https://loweredgames.github.io./view-changelog.html?file=Website/minecraft-versions-system.md), questa è una **nuova serie di versioni LTS**. se non ci sono bug seri la rilascio il prima possibile. questa sara una versione molto piccola, le prossime saranno solo di manutenzione (ci sara una nuova serie di versione per separare questa versione)._
+_[Come ho detto nel precedente post](https://Loweredgames.github.io/BlockMapsChangelogs/view-changelog.html?file=Website/minecraft-versions-system.md), questa è una **nuova serie di versioni LTS**. se non ci sono bug seri la rilascio il prima possibile. questa sara una versione molto piccola, le prossime saranno solo di manutenzione (ci sara una nuova serie di versione per separare questa versione)._
 
 # Highlights
 
