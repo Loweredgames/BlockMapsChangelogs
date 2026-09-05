@@ -21,7 +21,7 @@ non ci saranno sempre ma voglio iniziare ha fare blog su Minecraft pre-impostati
 
 Sono super contento che aggiungerano le Shader native al gioco e spero che si potranno personalizzare, secondo me si, e forse le includero nelle mie altre mappe. forse gia nella Voidblock? _ex: Skyblock Classic Edition_ forse...? 🧐
 
-comunque vi invito a visitare il mio [about](https://loweredgames.github.io/about) se volete altre informazioni sulla mia storia o altre info e ha scrivermi qui sotto se avete dei dubbi. vi inivito anche ha premere il pulsante di Google qui in alto per tradure le pagine automaticamente, per il momento ci sono queste lingue disponibili.
+comunque vi invito a visitare il mio [about](https://Loweredgames.github.io/BlockMapsChangelogs/about) se volete altre informazioni sulla mia storia o altre info e ha scrivermi qui sotto se avete dei dubbi. vi inivito anche ha premere il pulsante di Google qui in alto per tradure le pagine automaticamente, per il momento ci sono queste lingue disponibili.
 
 Il mio sito a anche una sezione commenti per ogni post che viene creato e pubblicato. Per chi è curiosamente tecnico è stato fatto grazie a [Giscus](https://giscus.app/).
 

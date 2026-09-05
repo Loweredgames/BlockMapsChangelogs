@@ -18,11 +18,11 @@ vi dico che questa transizione non avrà alcun impatto nelle vecchie versioni o 
 
 # Nuovo sito e Nuova Era:
 
-sto migrando a [un nuovo sito fatto e gestito completante da me](https://loweredgames.github.io./about.html), con provider grazie a **Github Pages**. Blogger è stato molto utile ma con grosse limitazioni e problemi vari, è molto vecchio e non sempre supportato, e poi continua a resettare i caratteri e gli spazzi, che rabbia 😠.
+sto migrando a [un nuovo sito fatto e gestito completante da me](https://Loweredgames.github.io/BlockMapsChangelogs/about.html), con provider grazie a **Github Pages**. Blogger è stato molto utile ma con grosse limitazioni e problemi vari, è molto vecchio e non sempre supportato, e poi continua a resettare i caratteri e gli spazzi, che rabbia 😠.
 da quando ho conosciuto il **markdown** me ne sono innamorato ❤️ e sapevo che prima o poi il mio futuro sito web doveva avere il formato `.md`. quindi il nuovo sito avrà i changelog, i mie social e link aggiornati con il formato `.md`. avrà anche i post solo in italiano come Blogger e sarà anche nelle altre parti, quando pubblico una nuova versione. lo so che sarà l'imitato l'italiano ma questo mi serve per risparmiare e velocizzare il processo di pubblicazione. (forse in futuro faro al contrario, 0 italiano e tutto inglese, ma devo vedere).
 comunque, il nuovo sito non è al **100% completo** e lo stile potrebbe cambiare completamente in futuro ma per il momento mi sembra valido.
 questo sito attualmente verra quindi archiviato e rimarrà fino a quando esisterà il mondo o l'umanità (okay troppi film di fantascienza 😄).
-[quindi salvate il nuovo sito nei preferiti e seguitemi 😃!!!](https://loweredgames.github.io./).
+[quindi salvate il nuovo sito nei preferiti e seguitemi 😃!!!](https://Loweredgames.github.io/BlockMapsChangelogs/).
 
 ---
 
@@ -43,6 +43,6 @@ Come ultima cosa vi dico che non so se riuscirò a rilasciare **il pesce d'april
 
 ---
 
-credo che è tutto.... [sto pubblicando un blog anche nel mio nuovo sito ufficiale andate ha vedere](https://loweredgames.github.io./view-changelog.html?file=Website/benvenuti.md).
+credo che è tutto.... [sto pubblicando un blog anche nel mio nuovo sito ufficiale andate ha vedere](https://Loweredgames.github.io/BlockMapsChangelogs/view-changelog.html?file=Website/benvenuti.md).
 
 _`Edit del 02.07.2025`: Ho aggiornato e aggiunto questo post per archiviazione. ho corretto alcune frasi e parole quindi se vedete alcune modifiche e per questo motivo. Grazie e alla prossima 😸._
