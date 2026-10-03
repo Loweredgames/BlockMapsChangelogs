@@ -1,6 +1,6 @@
 # JE-1.20.6-5.3.X-Voidblock:5.3.2_LTS
 
-_Scusate se ci è voluto cosi tanto tempo per questa versione ma ho dovuto fare il backporting di "Rebranding da Skyblock Classic Edition a Voidblock" #411 per il futuro, non verrano fatti piu questi cambiamenti cosi importanti d'ora in poi. ecco quindi la nuova versione 😸._
+_Scusate se ci è voluto così tanto tempo per questa versione ma ho dovuto fare il backporting di "Rebranding da Skyblock Classic Edition a Voidblock" [#411](https://github.com/Loweredgames/Voidblock/pull/411) per il futuro, non verràno fatti più questi cambiamenti così importanti d'ora in poi. ecco quindi la nuova versione 😸._
 
 ![Aggiornamento di Manutenzione](images/posts/Voidblock/5.3.X_LTS/je-1.20.6-5.3.X_LTS.png)
 
@@ -18,7 +18,7 @@ _Scusate se ci è voluto cosi tanto tempo per questa versione ma ho dovuto fare 
 - fatto il backporting "Rebranding da Skyblock Classic Edition a Voidblock" [#411](https://github.com/Loweredgames/Voidblock/pull/411)
 - - riadattato il datapack alla 7.0.1 della 1.21.X
 - - - la versione è stata mantenuta 5.3.2_LTS anche se il sistema è della 7.0.0.
-- - - molte correzioni e miglioramenti grazie a questo backporting. non verrà piu fatto in futuro
+- - - molte correzioni e miglioramenti grazie a questo backporting. non verrà più fatto in futuro
 - aggiunto import per tutte le vecchie versioni legacy della mappa, compatibilità totale [#392](https://github.com/Loweredgames/Voidblock/issues/392)
 - aggiunte nuove ricette per rinovare gli oggetti nel mondo Custom [#290](https://github.com/Loweredgames/Voidblock/pull/290)
 - fatto backporting di [#254](https://github.com/Loweredgames/Voidblock/issues/254) per la 1.20.6 [#372](https://github.com/Loweredgames/Voidblock/issues/372)
@@ -55,13 +55,13 @@ _Scusate se ci è voluto cosi tanto tempo per questa versione ma ho dovuto fare 
 - molti migliormanti vari nelle funzioni e in generale nel datapack grazie a [#411](https://github.com/Loweredgames/Voidblock/pull/411)
 - - fix panorama e aggiornato a uno nuovo
 - - - rimosso overlay (aggiunto quello default)
-- - - - da adesso i panorami potranno avere un tema nelle diverse versioni come il vanilla. per il momento resta il panorama "voidblock classic"
+- - - - da adesso i panorami potrànno avere un tema nelle diverse versioni come il vanilla. per il momento resta il panorama `voidblock classic`
 
 # Removed
 
 ## _functions and datapack_:
 
-- rimosso il tag del libro delle strutture non piu usato nell'import e in generale
+- rimosso il tag del libro delle strutture non più usato nell'import e in generale
 
 **Full Changelog**: https://github.com/Loweredgames/Voidblock/compare/1.20.6_JE-5a...1.20.6_JE-6
 

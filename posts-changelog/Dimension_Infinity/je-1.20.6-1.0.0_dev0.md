@@ -9,7 +9,7 @@
 
 ## _misc and other:_
 
-- rifatto tutto di nuovo (questa sara l'ultima volta)
+- rifatto tutto di nuovo (questa sarà l'ultima volta)
 - adesso la mappa si chiamera Dimension Infinity
 - molte correzioni e migliormanenti in tutta la mappa e il mondo in se
 
