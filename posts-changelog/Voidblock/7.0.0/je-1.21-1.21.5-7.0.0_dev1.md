@@ -25,9 +25,9 @@
 - separate le funzioni nelle varie versioni del datapack:
 - - le funzioni si attiverano in base alle versioni di Minecraft. questo non cambiera tanto la logica o le meccaniche della Voidblock, ma in futuri aggiornamenti ci potrebbero essere meccaniche esclusive in base alla versione o porting che potrebbero essere leggermente diversi,
 - - in generale il datapack capisce in quale versione di Minecraft sei, come la 1.21,
-- - - i testi popup dove mostrano le versioni come il pvn, da adesso mostrano la versione corrente e non piu tutte le versioni disponibili, quindi sara tutto piu facile da capire,
+- - - i testi popup dove mostrano le versioni come il pvn, da adesso mostrano la versione corrente e non più tutte le versioni disponibili, quindi sarà tutto più facile da capire,
 - - questa modifica non riflette il PID o alcune funzioni interne che rimangono nel ```data```.
-- - - i popup sono stati aggiornati nella 1.21.5 a causa dei cambiamenti interni del testo. piccola modifica al link Modrinth che adesso a un proprio link fasullo e che verra modificato in futuro.
+- - - i popup sono stati aggiornati nella 1.21.5 a causa dei cambiamenti interni del testo. piccola modifica al link Modrinth che adesso a un proprio link fasullo e che verrà modificato in futuro.
 - - spostate alcune funzioni:
 - - - la wall_texts_sign che si trova su ```structures``` cartella,
 - - - la mc(versione di Minecraft) che si trova su ```versions``` cartella,
@@ -51,7 +51,7 @@
 
 ## _functions and datapack_:
 
-- risolto un problema nel titolo "Voidblock" che ogni tanto veniva usato il sottotitolo
+- risolto un problema nel titolo `Voidblock` che ogni tanto veniva usato il sottotitolo
 
 # Removed
 

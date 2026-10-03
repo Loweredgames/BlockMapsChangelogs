@@ -1,4 +1,4 @@
-_Scusate ancora per il ritardo ma avevo degli impegni. la versione verra presto rilasciata._
+_Scusate ancora per il ritardo ma avevo degli impegni. la versione verrà presto rilasciata._
 
 # Highlights
 

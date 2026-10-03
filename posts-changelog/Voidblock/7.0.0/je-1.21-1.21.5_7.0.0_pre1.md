@@ -14,14 +14,14 @@ _se trovate dei bug segnalateli nel mio Discord server [Qui](https://discord.gg/
 
 - aggiornato il pack nella 1.21.5 fino alla 1.21.6 (25w21a)
 - - aggiornato da 70 a 75
-- - - per il momento la versione è insieme alla 1.21.5, ma nella prossima verra staccata
+- - - per il momento la versione è insieme alla 1.21.5, ma nella prossima verrà staccata
 
 # Fixed
 
 ## _functions and datapack_:
 
 - risolte le funzioni dei vari link che non erano ancora stati convertiti nella 1.21.5
-- - aggiunto link Modrinth fasullo anche nella funzione link. verra modificato in futuro...
+- - aggiunto link Modrinth fasullo anche nella funzione link. verrà modificato in futuro...
 - - rimosso il link della versione portable in Github dato che non serve
 - rimosso del codice duplicato
 
