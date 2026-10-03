@@ -46,7 +46,7 @@ _<font color="red"><center>(aggiornare sempre la barra della bossbar)</center>_<
 
 ## _functions and datapack_: tutte le funzioni che vengono dal datapack
 
-## _worlds and maps_: cambiamenti del mondo e le mappe
+## _worlds and maps_: cambiamenti del mondo e le custom maps
 
 ## _langs_: tutte le traduzioni della mappa
 
