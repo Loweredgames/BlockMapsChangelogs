@@ -33,7 +33,7 @@
 ## _langs_:
 
 - aggiunto nuovo avviso per avvertire che la sezione overlayer è ancora sperimentale
-- - in futuro l'avviso della compatibilita verra rimosso
+- - in futuro l'avviso della compatibilità verrà rimosso
 - - - per il momento non è tradotto
 
 # Changed
@@ -43,10 +43,10 @@
 - separate le funzioni nelle varie versioni del datapack:
 - - le funzioni si attiverano in base alle versioni di Minecraft, quindi nel pack. questo non cambiera tanto la logica o le meccaniche della Voidblock, ma in futuri aggiornamenti ci potrebbero essere meccaniche esclusive in base alla versione o porting che potrebbero essere leggermente diversi,
 - - in generale il datapack capisce in quale versione di Minecraft sei, come la 1.21,
-- - - i testi popup dove mostrano le versioni come il pvn, da adesso mostrano la versione corrente e non piu tutte le versioni disponibili, quindi sara tutto piu facile da capire,
+- - - i testi popup dove mostrano le versioni come il pvn, da adesso mostrano la versione corrente e non più tutte le versioni disponibili, quindi sarà tutto più facile da capire,
 - - - anche i cartelli vengono aggiunti in base alla versione
 - - questa modifica non riflette il PID o alcune funzioni interne che rimangono nel ```data``` come il versionamento.
-- - - i popup sono stati aggiornati nella 1.21.5 a causa dei cambiamenti interni del testo. piccola modifica al link Modrinth che adesso a un proprio link fasullo e che verra modificato in futuro.
+- - - i popup sono stati aggiornati nella 1.21.5 a causa dei cambiamenti interni del testo. piccola modifica al link Modrinth che adesso a un proprio link fasullo e che verrà modificato in futuro.
 - - - il pack adesso è compatibile anche con le versioni snapshots. quindi la 24w33a è 49 da 57 per le versioni dalla 1.21 alla 1.21.4
 - - - - le versioni non sono state testate e potrebbero non essere compatibili in tutte le versioni snapshots
 - - spostate alcune funzioni:
@@ -54,7 +54,7 @@
 - - - la mc(versione di Minecraft) che si trova su ```versions``` cartella
 - aggiunto import per tutte le vecchie versioni legacy della mappa, compatibilità totale [#392](https://github.com/Loweredgames/Voidblock/issues/392)
 - - da adesso ci sarà una conversione veloce per tutti i pid legacy anche se stai convertendo in una versione obsoleta della mappa. questo è stato fatto per garantire la compatibilità universale, rimuovendo sempre i pid e rendendo sempre compatibile.
-- - - i vecchi mondi dovranno essere importati manualmente quando apri il mondo per la prima volta ma poi tutto funzionerà come prima, quindi basta che clicchi su ```Import``` quando decidi le isole all'inizio.
+- - - i vecchi mondi dovrànno essere importati manualmente quando apri il mondo per la prima volta ma poi tutto funzionerà come prima, quindi basta che clicchi su ```Import``` quando decidi le isole all'inizio.
 
 ## _custom structures:_
 
@@ -67,7 +67,7 @@
 ## _misc and other_:
 
 - separata la versione hardcore da quella main
-- - da adesso si potra scaricare a parte
+- - da adesso si potrà scaricare a parte
 - aggiornate le traduzioni [#399](https://github.com/Loweredgames/Voidblock/pull/399) [#405](https://github.com/Loweredgames/Voidblock/pull/405)
 - aggiornati i link e il logo con le nuove icone per il rebranding
 
@@ -84,18 +84,18 @@
 
 - fix panorama e aggiornato a uno nuovo
 - - rimosso overlay (aggiunto quello default)
-- - - da adesso i panorami potranno avere un tema nelle diverse versioni come il vanilla. per il momento resta il panorama "voidblock classic"
+- - - da adesso i panorami potrànno avere un tema nelle diverse versioni come il vanilla. per il momento resta il panorama `voidblock classic`
 
 # Removed
 
 ## _functions and datapack:_
 
 - rimossa la funzione 'legacy_structures_system.mcfunction' e integrata nella funzione 'legacy_conversion.mcfunction'
-- rimosse alcune scoreboard e alcune funzioni non piu usate
+- rimosse alcune scoreboard e alcune funzioni non più usate
 - - pulizia nel legacy
 - - - pulizia in generale nel datapack
 - rimosso del codice duplicato
-- rimosso il tag del libro delle strutture non piu usato nell'import
+- rimosso il tag del libro delle strutture non più usato nell'import
 
 ## _misc and other_:
 

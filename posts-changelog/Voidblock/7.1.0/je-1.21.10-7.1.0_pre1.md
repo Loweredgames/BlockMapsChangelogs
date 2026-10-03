@@ -1,17 +1,17 @@
-_Scusate per il ritardo. la versione è completa e verra presto rilasciata._
+_Scusate per il ritardo. la versione è completa e verrà presto rilasciata._
 
 # Highlights
 
 ## _functions and datapack_:
 
-- le gamerule da adesso saranno settate solo all'inizio
+- le gamerule da adesso sarànno settate solo all'inizio
 
 # Changed
 
 ## _functions and datapack_:
 
-- le gamerule da adesso saranno settate solo all'inizio
-- - questo significa che si potranno modificare alla fine della conversione dei PID
+- le gamerule da adesso sarànno settate solo all'inizio
+- - questo significa che si potrànno modificare alla fine della conversione dei PID
 - - - *molti utenti l'hanno chiesto e finalmente mi sono deciso di farlo 😄*
 
 # Fixed

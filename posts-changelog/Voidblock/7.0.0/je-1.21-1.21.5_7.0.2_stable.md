@@ -1,6 +1,6 @@
 # Known Issue:
 
-- _il pack nel resources pack mostra che è incompatibile anche se funziona normalmente. verra risolto in futuro 👌._
+- _il pack nel resources pack mostra che è incompatibile anche se funziona normalmente. verrà risolto in futuro 👌._
 
 # Highlights
 
@@ -23,8 +23,8 @@
 - aggiornato il test alla nuova struttura del datapack:
 - - è stato fatto un grande refactoring con diversi cambiamenti e rimozioni alla logica [#419](https://github.com/Loweredgames/Voidblock/issues/419)
 - - molte correzzioni e miglioramenti minori nelle funzioni
-- - questa versione da adesso non sara piu supportata. attivato l'avviso obsoleto e versione di sviluppo
-> - - i mondi dei test rimangono come prima ma potrebbero verificarsi dei problemi gravi che non verranno risolti
+- - questa versione da adesso non sarà più supportata. attivato l'avviso obsoleto e versione di sviluppo
+> - - i mondi dei test rimangono come prima ma potrebbero verificarsi dei problemi gravi che non verrànno risolti
 - spostata la funzione ```pvn_remove``` e ```pid_remove``` e resa globale nel ```data``` cartella
 
 ## _misc and other_:
