@@ -23,12 +23,12 @@
 ## _worlds and maps:_
 
 - cambiate e modificate alcune mappe e cartelli nei mondi:
-- - cambiato il mondo "Plastic World" in "Sculkand"
-- - cambiato il mondo "Desert" in "Desert Lands"
-- - cambiato il mondo "Frost" in "Frost Lands"
-- - cambiato il mondo "Nightmare" in "Nightmare Room"
-- - cambiato il mondo "Candy Land" in "Candy World"
-- - cambiato il mondo "Ocean" in "Ocean Planet"
+- - cambiato il mondo `Plastic World` in `Sculkand`
+- - cambiato il mondo `Desert` in `Desert Lands`
+- - cambiato il mondo `Frost` in `Frost Lands`
+- - cambiato il mondo `Nightmare` in `Nightmare Room`
+- - cambiato il mondo `Candy Land` in `Candy World`
+- - cambiato il mondo `Ocean` in `Ocean Planet`
 - - - bloccatti i cartelli con il favo (anche nei futuri cartelli)
 - - - sostituito la tnt con il barile per prevenire i danni dal griefing
 

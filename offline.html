@@ -1,34 +1,239 @@
 <!DOCTYPE html>
-<html lang="it">
-<body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Block Maps Changelogs is temporarily offline for maintenance.">
+    <title>Block Maps Changelogs - Manutenzione</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Mantiene gli stili della pagina offline isolati da questa classe body. */
+        body.maintenance-page {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            background-color: #1f1f1f;
+        }
 
-<h1>Il Sito Web Block Maps Changelogs è Attualmente in Manutenzione:</h1>
-<h2>Torna piu tardi :/ <a href="/index.html">oppure torna alla home se il sito si è attivato.</h2>
+        /* Mantiene il titolo visibile in cima durante lo scorrimento. */
+        .maintenance-page > header h1 {
+            max-width: 1000px;
+            margin: 0 auto;
+            font-size: 2rem;
+        }
 
-    <a class="copilot-badge" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" aria-label="Made by GitHub Copilot">
-        <span class="copilot-badge_text">Made by Github Copilot</span>
-    </a>
+        .maintenance-page > header h1 a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-<!-- Footer con copyright e Link-->
-<p>In tanto controlla su i vari links per le mie mappe o i mie social media:</p>
-<a href="https://discord.gg/T6PHxhznJ6"><h4>Discord Server</h4></p>
-<a href="https://github.com/Loweredgames/">GitHub</p>
-<a href="https://modrinth.com/user/LoweredgamesMC/">Modrinth</p>
-<a href="https://www.planetminecraft.com/member/loweredgames/">PlanetMinecraft</p>
-<a href="https://www.curseforge.com/members/loweredgamesmc/projects/">CurseForge</p>
-<a href="https://smithed.net/Loweredgames/">Smithed</p>
-<a href="https://crowdin.com/profile/loweredgamesmc">Crowdin</p>
+        .maintenance-page > header h1 a:hover {
+            color: #dddddd;
+        }
 
-<p>&copy; <a href="license.html">LICENZE Loweredgames</a> - Tutti i diritti riservati.</p>
+        .maintenance-page > header h1 a:focus-visible {
+            border-radius: 2px;
+            outline: 2px solid #d2b27d;
+            outline-offset: 6px;
+        }
 
-<!-- Aggiornamento in tempo reale-->
-<h2><i>Aggiornamento in tempo reale:</i></h2>
+        .maintenance-page > header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(26, 26, 26, 0.96);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(8px);
+        }
 
+        .maintenance-main {
+            display: grid;
+            flex: 1;
+            place-items: start center;
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            padding: 2rem 1.25rem 3rem;
+        }
 
-<!-- Descrizione per avvertire-->
-<i>20.03.2025 - 21:33 - Per il momento nulla...</i>
-</div>
+        .maintenance-panel {
+            width: min(100%, 800px);
+            box-sizing: border-box;
+            padding: 2.5rem;
+            border: 1px solid #3d3d3d;
+            border-top: 4px solid #696f6a;
+            border-radius: 8px;
+            background: rgba(26, 26, 26, 0.96);
+            box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
+        }
 
+        .maintenance-panel > p:not(.maintenance-note) {
+            max-width: 58ch;
+            color: #cccccc;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
 
+        .maintenance-updates {
+            margin: 1.5rem 0 2rem;
+            padding: 1rem 0;
+            border-top: 1px solid #3d3d3d;
+            border-bottom: 1px solid #3d3d3d;
+        }
+
+        .maintenance-updates h2,
+        .maintenance-section-heading {
+            margin: 0 0 0.75rem;
+            color: #ffffff;
+            font-size: 1.2rem;
+        }
+
+        .maintenance-update-list {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .maintenance-update-list li {
+            display: block;
+            padding: 0.9rem 0 0.9rem 1rem;
+            border-left: 2px solid #555555;
+            border-bottom: 1px solid #333333;
+        }
+
+        .maintenance-update-list li:last-child {
+            border-bottom: 0;
+        }
+
+        .maintenance-update-time {
+            display: block;
+            margin-bottom: 0.35rem;
+            color: #d2b27d;
+            font-size: 0.95rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            line-height: 1.4;
+        }
+
+        .maintenance-update-list p {
+            margin: 0;
+            color: #cccccc;
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        .maintenance-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            max-width: 480px;
+            margin: 1rem 0 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .maintenance-links li {
+            margin: 0;
+        }
+
+        .maintenance-links a {
+            display: flex;
+            min-height: 52px;
+            box-sizing: border-box;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.65rem 0.85rem;
+            border: 1px solid #3d3d3d;
+            border-radius: 4px;
+            background: #2d2d2d;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .maintenance-links a:hover,
+        .maintenance-links a:focus-visible {
+            background: #3d3d3d;
+            border-color: #777777;
+        }
+
+        .maintenance-links a:focus-visible {
+            outline: 2px solid #d2b27d;
+            outline-offset: 2px;
+        }
+
+        .maintenance-links img {
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+            object-fit: contain;
+        }
+
+        .maintenance-note {
+            margin: 1.5rem 0 0;
+            color: #999999;
+            font-size: 0.95rem;
+        }
+
+        /* Riduce gli spazi del pannello sugli schermi piccoli. */
+        @media (max-width: 520px) {
+            .maintenance-panel {
+                padding: 1.5rem 1.1rem;
+            }
+
+            .maintenance-page > header {
+                padding: 1.5rem 1rem;
+            }
+
+            .maintenance-page > header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body class="maintenance-page">
+    <header>
+        <h1 id="maintenance-title"><a href="index.html">Block Maps Changelogs - Manutenzione</a></h1>
+    </header>
+
+    <main class="maintenance-main">
+        <section class="maintenance-panel" aria-labelledby="maintenance-title">
+            <section class="maintenance-updates" aria-labelledby="maintenance-updates-title" aria-live="polite">
+                <h2 id="maintenance-updates-title">Live Updates:</h2>
+                <ul class="maintenance-update-list">
+                    <!--
+                    Duplica questo blocco per ogni nuovo aggiornamento.
+                    Inserisci data e ora una sola volta nel formato GG/MM/AAAA - HH:MM:SS (fuso Europe/Rome).
+                    <li>
+                        <span class="maintenance-update-time">03/10/2026 - 10:00:00 CEST</span>
+                        <p>Nothing to report right now.</p>
+                    </li>
+                    -->
+                    <li>
+                        <span class="maintenance-update-time">03/10/2026 - 20:39:35 CEST</span>
+                        <p><i>I'm running a test. The changelog site will be back shortly.</i></p>
+                    </li>
+                </ul>
+            </section>
+
+            <h2 class="maintenance-section-heading">Site Status:</h2>
+            <p>The site is temporarily offline for maintenance. In the meantime, follow my projects and social channels:</p>
+            <nav aria-label="My projects and social links">
+                <ul class="maintenance-links">
+                    <li><a href="https://discord.gg/T6PHxhznJ6" target="_blank" rel="noopener noreferrer"><img src="images/social_logo/Discord.webp" alt="">Discord Server</a></li>
+                    <li><a href="https://github.com/Loweredgames/" target="_blank" rel="noopener noreferrer"><img src="images/social_logo/Github.webp" alt="">GitHub</a></li>
+                    <li><a href="https://modrinth.com/user/LoweredgamesMC/" target="_blank" rel="noopener noreferrer"><img src="images/social_logo/Modrinth.webp" alt="">Modrinth</a></li>
+                    <li><a href="https://www.planetminecraft.com/member/loweredgames/" target="_blank" rel="noopener noreferrer"><img src="images/social_logo/PlanetMinecraft.webp" alt="">PlanetMinecraft</a></li>
+                    <li><a href="https://www.curseforge.com/members/loweredgamesmc/projects/" target="_blank" rel="noopener noreferrer"><img src="images/social_logo/CursedForge.webp" alt="">CurseForge</a></li>
+                    <li><a href="https://smithed.net/Loweredgames/" target="_blank" rel="noopener noreferrer"><img src="images/social_logo/Smithed.webp" alt="">Smithed</a></li>
+                    <li><a href="https://crowdin.com/profile/loweredgamesmc" target="_blank" rel="noopener noreferrer"><img src="images/social_logo/Crowdin.webp" alt="">Crowdin</a></li>
+                </ul>
+            </nav>
+            <p class="maintenance-note">Thank you for your patience.</p>
+        </section>
+    </main>
 </body>
 </html>

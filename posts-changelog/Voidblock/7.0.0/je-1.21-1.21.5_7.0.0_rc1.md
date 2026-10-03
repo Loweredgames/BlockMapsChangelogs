@@ -17,7 +17,7 @@
 
 - fix panorama e aggiornato a uno nuovo
 - - rimosso overlay (aggiunto quello default)
-- - - da adesso i panorami potranno avere un tema nelle diverse versioni come vanilla. per il momento resta il panorama "voidblock classic"
+- - - da adesso i panorami potrànno avere un tema nelle diverse versioni come il vanilla. per il momento resta il panorama `voidblock classic`
 
 > _**⚠️BUILDING: They are development version and can be unstable, use it at your risk⚠️**_
 

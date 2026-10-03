@@ -23,15 +23,15 @@ _Finally here is the first fix of this LTS. to see the whole list of bugs and ba
 - aggiunti suoni diversi di avviso nella conversione e in altri messaggi del sistema nelle funzioni [#245](https://github.com/Loweredgames/Voidblock/issues/245)
 aggiunto vicino all'avviso delle versioni obsolete, quanto tempo finisce una LTS. per avvisare i giocatori molto prima per il cambio della versione [#364](https://github.com/Loweredgames/Voidblock/issues/364)
 - aggiunto un nuovo overlay per i cambiamenti delle future versioni di Minecraft
-- - se dovese cambiare tra gli aggiornamenti, verra aggiunto uno nuovo con la modifica necessaria.
+- - se dovese cambiare tra gli aggiornamenti, verrà aggiunto uno nuovo con la modifica necessaria.
 - - - per il momento non fa nulla
 
 ## _custom structures world:_
 
-- le strutture e le isole nella cartella "generated" sono stati migrati nella cartella worldgen [#362](https://github.com/Loweredgames/Voidblock/issues/362)
-- - le strutture del mondo delle dimensioni/test adesso usano una loro cartella chiamata "structures_test"
+- le strutture e le isole nella cartella `generated` sono stati migrati nella cartella worldgen [#362](https://github.com/Loweredgames/Voidblock/issues/362)
+- - le strutture del mondo delle dimensioni/test adesso usano una loro cartella chiamata `structures_test`
 - - - riordina le isole e le strutture in una cartella separata
-- - - non è piu necessario avere la cartella "generated" nella cartella del mondo principale. basta avere solo il datapack dentro, cosi non c'è piu confusione.
+- - - non è più necessario avere la cartella `generated` nella cartella del mondo principale. basta avere solo il datapack dentro, così non c'è più confusione.
 
 ## _misc and other:_
 
@@ -44,13 +44,13 @@ aggiunto vicino all'avviso delle versioni obsolete, quanto tempo finisce una LTS
 ## _custom structures world:_
 
 - le Elitra non fanno parte del mondo custom e non possono essere rinnovate in maniera naturale. [#358](https://github.com/Loweredgames/Voidblock/issues/358)
-questo problema è stato risolto. da adesso si può trovare una chest in una strongold che contiene le elitra e i template dell'End in maniera "naturale" fino ha quando non viene risolto.
+questo problema è stato risolto. da adesso si può trovare una chest in una strongold che contiene le elitra e i template dell'End in maniera `naturale` fino ha quando non viene risolto.
 
 # Removed
 
 ## _custom structures:_
 
-- non è piu necessario avere la cartella "generated" nella cartella del mondo principale
-quindi è stata rinominata da rimuovere. verra rimossa in futuro
+- non è più necessario avere la cartella `generated` nella cartella del mondo principale
+quindi è stata rinominata da rimuovere. verrà rimossa in futuro
 
 [Download](https://github.com/Loweredgames/Voidblock/releases/download/1.20.6_JE-5a/Skyblock.Classic.Edition_LTS.zip)

@@ -1,4 +1,4 @@
-_Ciao ragazzi, finalmente ci siamo la 7.0.0 [Rebranding Update] è pronta per essere rilasciata. questa versione verra rilasciata presto, si spera. la 1.21.5 verra aggiunta nella prossima versione. ha casua del rebranding ci saranno molti bug, quindi segnalate sempre su Discord o Github._
+_Ciao ragazzi, finalmente ci siamo la 7.0.0 [Rebranding Update] è pronta per essere rilasciata. questa versione verrà rilasciata presto, si spera. la 1.21.5 verrà aggiunta nella prossima versione. ha causa del rebranding ci sarànno molti bug, quindi segnalate sempre su Discord o Github._
 _Grazie a tutti._
 
 # Highlights
@@ -22,12 +22,12 @@ _Grazie a tutti._
 
 - aggiunto import per tutte le vecchie versioni legacy della mappa, compatibilità totale [#392](https://github.com/Loweredgames/Voidblock/issues/392)
 - - da adesso ci sarà una conversione veloce per tutti i pid legacy anche se stai convertendo in una versione obsoleta della mappa. questo è stato fatto per garantire la compatibilità universale, rimuovendo sempre i pid e rendendo sempre compatibile.
-- - - i vecchi mondi dovranno essere importati manualmente quando apri il mondo per la prima volta ma poi tutto funzionerà come prima, quindi basta che clicchi su ```Import``` quando decidi le isole all'inizio.
+- - - i vecchi mondi dovrànno essere importati manualmente quando apri il mondo per la prima volta ma poi tutto funzionerà come prima, quindi basta che clicchi su ```Import``` quando decidi le isole all'inizio.
 
 ## _misc and other_:
 
 - separata la versione hardcore da quella main
-- - da adesso si potra scaricare a parte
+- - da adesso si potrà scaricare a parte
 - aggiornate le traduzioni [#399](https://github.com/Loweredgames/Voidblock/pull/399)
 - aggiornati i link e il logo con le icone
 
@@ -36,7 +36,7 @@ _Grazie a tutti._
 ## _functions and datapack:_
 
 - rimossa la funzione 'legacy_structures_system.mcfunction' e integrata nella funzione 'legacy_conversion.mcfunction'
-- rimosse alcune scoreboard e alcune funzioni non piu usate
+- rimosse alcune scoreboard e alcune funzioni non più usate
 - - pulizia nel legacy
 - - - pulizia in generale nel datapack
 
