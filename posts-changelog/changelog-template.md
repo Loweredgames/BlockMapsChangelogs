@@ -5,7 +5,7 @@ _<font color="red"><center>(aggiornare sempre la barra della bossbar)</center>_<
 # > ESEMPIO:
 
 
-- **VERSION:**(Nome Edizione JE o BE),(Versione di Minecraft),(Versione della mappa),(Nome progetto)-(numero maggiore),(numero minore),(per LTS aggiungere il nome della versione: "Maintenance Update - LTS", e aggiungere il suffisso "_LTS" solo nelle versioni LTS)
+- **VERSION:**(Nome Edizione JE o BE),(Versione di Minecraft),(Versione della mappa),(Nome progetto)-(numero maggiore),(numero minore),(per LTS aggiungere il nome della versione: `Maintenance Update - LTS`, e aggiungere il suffisso `_LTS` solo nelle versioni LTS)
 - - aggiornare solo in Github aggiungendo le modifiche in desc, aggiungere il n. di versione solo in Github (non nei file)
 
 - - **SOLO LTS**: aggiungere sempre seconda versione rilasciata in basso come una catena. da mettere in changelog-loader.js. aggiungere solo versione della mappa e la data con la visibilita.
@@ -21,7 +21,7 @@ _<font color="red"><center>(aggiornare sempre la barra della bossbar)</center>_<
 - - - **_aggiungere immagine_**
 - - - aggiungere i problemi o le modifiche anche dentro i commit.
 
-- - **SOLO RELEASE_CANDIDATE**: aggiornare sempre <ins>"latest branch"</ins> per il backup
+- - **SOLO RELEASE_CANDIDATE**: aggiornare sempre <ins>`latest branch`</ins> per il backup
 
 - - per le multi versioni aggiungere un > nella sezione versioni di Minecraft: **_ESEMPIO: JE-1.20.1>1.20.6-2.1.0-Redstonecraft:BUILDING:03.12.2050a_**
 

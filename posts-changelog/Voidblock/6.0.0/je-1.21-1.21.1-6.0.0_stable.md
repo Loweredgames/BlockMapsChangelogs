@@ -4,12 +4,12 @@ _as always thank you very much._
 
 # Highlights:
 
-- aggiunte le "Trial Chamber" nel mondo [#232](https://github.com/Loweredgames/Voidblock/issues/232)
+- aggiunte le `Trial Chamber` nel mondo [#232](https://github.com/Loweredgames/Voidblock/issues/232)
 - rimosse molte score vecchie nella 1.21/1.21.1 [#347](https://github.com/Loweredgames/Voidblock/issues/347)
 - aggiunta la **Portable Version**, una versione portatile e aggiornati i link
 - aggiunto un sistema Import per i mondi che non hanno la Skyblock Classic Edition ma vogliono migrare alla mappa Skyblock CE [#365](https://github.com/Loweredgames/Voidblock/issues/365)
-- le strutture e le isole nella cartella "generated" sono stati migrati nella cartella worldgen [#362](https://github.com/Loweredgames/Voidblock/issues/362)
-- - la cartella "generated" è stata rimossa e adesso serve solo il datapack e il resources pack
+- le strutture e le isole nella cartella `generated` sono stati migrati nella cartella worldgen [#362](https://github.com/Loweredgames/Voidblock/issues/362)
+- - la cartella `generated` è stata rimossa e adesso serve solo il datapack e il resources pack
 
 # Added
 
@@ -18,21 +18,21 @@ _as always thank you very much._
 - raggiunta la score che rimuove gli avanzamenti nel mondo custom quando si avvia la Skyblock per la prima volta
 - cambiato il messaggio nel popup dei test [#363](https://github.com/Loweredgames/Voidblock/issues/363)
 - aggiunto un nuovo overlay per i cambiamenti delle future versioni di Minecraft
-- - se dovese cambiare tra gli aggiornamenti, verra aggiunto uno nuovo con la modifica necessaria.
+- - se dovese cambiare tra gli aggiornamenti, verrà aggiunto uno nuovo con la modifica necessaria.
 - - - _per il momento non fa nulla_.
 - aggiunto un sistema Import per i mondi che non hanno la Skyblock Classic Edition ma vogliono migrare alla mappa Skyblock CE [#365](https://github.com/Loweredgames/Voidblock/issues/365)
 - - basta che clicchi all'inizio import e il mondo viene generato senza niente (sostituisci il level.dat se non vengono generate le strutture)
 - - - **_DA USARE CON ATTENZIONE, LA FUNZIONE NON FA GENERARE NESSUNA ISOLA, RENDENDO IMPOSSIBILE LA MAPPA IN SE_**.
 - - si può anche decidere di cancellare il datapack se si vuole ritornare in maniera precedente, senza nessun problema.
 - aggiunti suoni diversi di avviso nella conversione e in altri messaggi del sistema nelle varie funzioni del datapack [#245](https://github.com/Loweredgames/Voidblock/issues/245)
-- - aggiornata la funzione "Import" con il blocco sonoro "bit"
-- - - per il "legacy_pid" viene usato il "bell"
-- - - per il "PID" e il "SUBPID" viene usato "chime". nel SUBPID il pitch è a 1 invece che a 2
+- - aggiornata la funzione `Import` con il blocco sonoro `bit`
+- - - per il `legacy_pid` viene usato il `bell`
+- - - per il `PID` e il `SUBPID` viene usato `chime`. nel SUBPID il pitch è a 1 invece che a 2
 - - - per le strutture nei test invece viene usato il blocco di ametista
 
 ## _worlds and maps:_
 
-- aggiunte le "Trial Chamber" nel mondo [#232](https://github.com/Loweredgames/Voidblock/issues/232)
+- aggiunte le `Trial Chamber` nel mondo [#232](https://github.com/Loweredgames/Voidblock/issues/232)
 - - adesso si possono rinnovare la maggior parte degli oggetti e blocchi della 1.21
 
 ## _misc and other:_
@@ -60,7 +60,7 @@ _as always thank you very much._
 
 - riordinato il popup UI all'inizio quando si prendono le decisioni delle isole
 - - anche nel mondo dei test
-- - - la versione separata del mondo dei test è stata rimossa e non piu supportata
+- - - la versione separata del mondo dei test è stata rimossa e non più supportata
 
 ## _langs:_
 
@@ -74,24 +74,24 @@ _as always thank you very much._
 
 ## _custom structures:_
 
-- le strutture e le isole nella cartella "generated" sono stati migrati nella cartella worldgen [#362](https://github.com/Loweredgames/Voidblock/issues/362)
-- - le strutture del mondo delle dimensioni/test adesso usano una loro cartella chiamata "structures_test"
+- le strutture e le isole nella cartella `generated` sono stati migrati nella cartella worldgen [#362](https://github.com/Loweredgames/Voidblock/issues/362)
+- - le strutture del mondo delle dimensioni/test adesso usano una loro cartella chiamata `structures_test`
 - - - riordina le isole e le strutture in una cartella separata
-- - - non è piu necessario avere la cartella "generated" nella cartella del mondo principale. basta avere solo il datapack dentro, cosi non c'è piu confusione.
-- - la cartella "generated" è stata rimossa e adesso serve solo il datapack e il resources pack, nel mondo della Skyblock CE.
+- - - non è più necessario avere la cartella `generated` nella cartella del mondo principale. basta avere solo il datapack dentro, così non c'è più confusione.
+- - la cartella `generated` è stata rimossa e adesso serve solo il datapack e il resources pack, nel mondo della Skyblock CE.
 - spostata l'isola fungo nella sezione isole nel mondo delle strutture
 
 ## _Fixed_
 
 ## _langs:_
 
-- sono state rimosse le stringe non piu usate:
-- - "skyblock_classic_edition.skyblock_setup.legacy_version" e "skyblock_classic_edition.skyblock_setup.legacy_version.info"
+- sono state rimosse le stringe non più usate:
+- - `skyblock_classic_edition.skyblock_setup.legacy_version` e `skyblock_classic_edition.skyblock_setup.legacy_version.info`
 
 ## _custom structures:_
 
 - le Elitra non fanno parte del mondo custom e non possono essere rinnovate in maniera naturale. [#358](https://github.com/Loweredgames/Voidblock/issues/358)
-- - questo problema è stato risolto. da adesso si può trovare una chest in una strongold che contiene le elitra e i template dell'End in maniera "naturale" fino ha quando non viene risolto L'End.
+- - questo problema è stato risolto. da adesso si può trovare una chest in una strongold che contiene le elitra e i template dell'End in maniera `naturale` fino ha quando non viene risolto L'End.
 
 # Removed
 
@@ -99,13 +99,13 @@ _as always thank you very much._
 
 - rimosse molte score vecchie nella 1.21/1.21.1 [#347](https://github.com/Loweredgames/Voidblock/issues/347)
 - - la score versione legacy è diventata obbligatoria [#202](https://github.com/Loweredgames/Voidblock/issues/202)
-- - rimosso tutto in "legacy" funzione (#242)
-- - - per alcuni cambiamenti interni è stata rimossa la score "PID_legacy" per la 1.21.X e sostituita da altre score che fanno lo stesso lavoro
+- - rimosso tutto in `legacy` funzione (#242)
+- - - per alcuni cambiamenti interni è stata rimossa la score `PID_legacy` per la 1.21.X e sostituita da altre score che fanno lo stesso lavoro
 
 ## custom structures:
 
-- non è piu necessario avere la cartella "generated" nella cartella del mondo principale
-- - quindi è stata rinominata da rimuovere. verra rimosso nella 1.22
+- non è più necessario avere la cartella `generated` nella cartella del mondo principale
+- - quindi è stata rinominata da rimuovere. verrà rimosso nella 1.22
 
 **Full Changelog**: https://github.com/Loweredgames/Voidblock/compare/1.21_JE-0a...1.21_JE-4a
 
