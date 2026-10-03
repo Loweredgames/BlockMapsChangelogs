@@ -11,3 +11,9 @@ if (SITE_STATUS.maintenanceMode) {
         window.location.replace(maintenanceUrl.href);
     }
 }
+
+// Mostra l'avviso solo dopo la riapertura del sito.
+const onlineNotice = document.getElementById('site-online-notice');
+if (onlineNotice && !SITE_STATUS.maintenanceMode) {
+    onlineNotice.hidden = false;
+}
