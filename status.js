@@ -1,10 +1,13 @@
 const SITE_STATUS = {
-    enabled: true, // cambia a false per attivare il reindirizzamento per la manutenzione
-    maintenancePage: 'offline.html' // pagina di manutenzione
+    maintenanceMode: true, // Imposta true per attivare la manutenzione
+    maintenancePage: 'offline.html'
 };
 
-function checkSiteStatus() {
-    if (!SITE_STATUS.enabled) {
-        window.location.href = SITE_STATUS.maintenancePage;
+if (SITE_STATUS.maintenanceMode) {
+    const statusScript = document.currentScript;
+    const maintenanceUrl = new URL(SITE_STATUS.maintenancePage, statusScript.src);
+
+    if (window.location.pathname !== maintenanceUrl.pathname) {
+        window.location.replace(maintenanceUrl.href);
     }
 }
