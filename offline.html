@@ -62,7 +62,7 @@
             box-sizing: border-box;
             padding: 2.5rem;
             border: 1px solid #3d3d3d;
-            border-top: 4px solid #696f6a;
+            border-top: 4px solid #3d3d3d;
             border-radius: 8px;
             background: rgba(26, 26, 26, 0.96);
             box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28);
@@ -73,6 +73,18 @@
             color: #cccccc;
             font-size: 1rem;
             line-height: 1.7;
+        }
+
+        /* Evidenzia il messaggio mostrato quando la manutenzione termina. */
+        .maintenance-online-notice {
+            margin: 0 0 1.5rem;
+            padding: 0.9rem 1rem;
+            border-left: 3px solid #d2b27d;
+            background: #222222;
+        }
+
+        .maintenance-online-notice[hidden] {
+            display: none;
         }
 
         .maintenance-updates {
@@ -201,6 +213,9 @@
 
     <main class="maintenance-main">
         <section class="maintenance-panel" aria-labelledby="maintenance-title">
+            <p id="site-online-notice" class="maintenance-online-notice" role="status" hidden>
+                The website is back online. Click the title at the top of the page to return to the home page.
+            </p>
             <section class="maintenance-updates" aria-labelledby="maintenance-updates-title" aria-live="polite">
                 <h2 id="maintenance-updates-title">Live Updates:</h2>
                 <ul class="maintenance-update-list">
@@ -235,5 +250,6 @@
             <p class="maintenance-note">Thank you for your patience.</p>
         </section>
     </main>
+    <script src="status.js"></script>
 </body>
 </html>
