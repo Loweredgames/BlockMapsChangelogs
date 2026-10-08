@@ -79,8 +79,8 @@ body::after {
 
 /* Prossimo aggiornamento di Minecraft. Marketing per lo sfondo. */
 body.coming-update::before {
-    background-color: #fbff0017;
-    background-image: url('images/posts/Voidblock/7.3.0/je-26.1-26.2-7.3.1_rc1.png');
+    background-color: #a6532d34;
+    background-image: url('images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.png');
 }
 
 /* MESI SEASONS (Background che cambiano in mese in mese per riflettere la stagione o il periodo) */

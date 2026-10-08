@@ -21,7 +21,7 @@ window.changelogList = [
     {
         title: 'JE-26.1.2>26.3-7.3.2-Voidblock:RC 1 - Draft',
         date: '???',
-        image: 'images/drafts/draft.png',
+        image: 'images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.png',
         file: 'Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.md',
         tags: ['release-candidate','drafts'],
         visible: true

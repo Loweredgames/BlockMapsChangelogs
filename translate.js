@@ -163,9 +163,9 @@ const holidays = [
     // Prossimo aggiornamento di Minecraft. Marketing per lo sfondo.
     {
         id: 'coming-update',
-        month: 6,
+        month: 9,
         startDay: 1,
-        endDay: 27,
+        endDay: 31,
         className: 'coming-update',
         iconPath: 'images/icons/coming-update/favicon.ico'
     },
