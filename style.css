@@ -79,8 +79,8 @@ body::after {
 
 /* Prossimo aggiornamento di Minecraft. Marketing per lo sfondo. */
 body.coming-update::before {
-    background-color: #fbff0017;
-    background-image: url('images/posts/Voidblock/7.3.0/je-26.1-26.2-7.3.1_rc1.png');
+    background-color: #a6532d34;
+    background-image: url('images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.png');
 }
 
 /* MESI SEASONS (Background che cambiano in mese in mese per riflettere la stagione o il periodo) */
@@ -1265,17 +1265,21 @@ main {
 }
 
 .changelog h3 {
-    /* tertiary headings should be smaller than h2 and visually distinct */
+    display: inline-block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 2.25em 0 0.9em;
+    padding: 0.45rem 0.8rem;
     color: #ffffff;
-    font-size: 0.90em;
-    border-bottom: 1px solid #2d2d2d;
-    padding-bottom: 0.5rem;
-    margin-top: 2rem;
-    transition: color 0.5s;
-}
-
-.changelog h3:hover {
-    color: #bebebe;
+    font-size: 1.15em;
+    line-height: 1.4;
+    font-weight: 700;
+    text-align: left;
+    overflow-wrap: anywhere;
+    border: 1px solid rgba(74, 158, 255, 0.32);
+    border-left: 3px solid #4a9eff;
+    border-radius: 4px;
+    background: rgba(74, 158, 255, 0.12);
 }
 
 .changelog ul {
@@ -2333,7 +2337,12 @@ footer {
     color: #999;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    border-bottom: none;
+    display: block;
+    width: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
 }
 
 .changelog .maintenance-list {
