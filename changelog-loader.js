@@ -20,10 +20,10 @@ window.changelogList = [
     
     {
         title: 'JE-26.1.2>26.3-7.3.2-Voidblock:RELEASE_CANDIDATE-1',
-        date: '???',
+        date: '10.10.2026',
         image: 'images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.png',
         file: 'Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.md',
-        tags: ['release-candidate','drafts'],
+        tags: ['release-candidate'],
         visible: true
     },
     {
