@@ -4,8 +4,8 @@
 
 // Qui puoi scegliere quale post in evidenzia mostrare in homepage.
 window.featuredPostConfig = {
-    file: 'Voidblock/7.3.0/je-26.1-26.2-7.3.1_stable.md',
-    description: 'Il Chaos Cubed Drop è arrivato: esplora la nuova isola sulfur e usa i sulfur cube per creare minigiochi!!!'
+    file: 'Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_stable.md',
+    description: 'Il Wilderness Bound Drop è arrivato: esplora le tre nuove isole autunnali, con tanti blocchi decorativi, un nuovo letto esplorativo e i cuscini, dove finalmente ti puoi sedere in Minecraft!!!'
 };
 
 // ===================================
@@ -18,6 +18,14 @@ window.changelogList = [
 
 // Post Rilasciati
     
+    {
+        title: 'JE-26.1.2>26.3-7.3.2-Voidblock:7.3.2',
+        date: '17.10.2026',
+        image: 'images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.png',
+        file: 'Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_stable.md',
+        tags: ['stable'],
+        visible: true
+    },
     {
         title: 'JE-26.1.2>26.3-7.3.2-Voidblock:RELEASE_CANDIDATE-1',
         date: '10.10.2026',
