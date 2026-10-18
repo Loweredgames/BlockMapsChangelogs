@@ -190,7 +190,7 @@ const holidays = [
         iconPath: 'images/icons/april_fools/favicon.ico'
     },
     
-    // Compleanno di Minecraft
+    // Compleanno di Minecraft TO DO
     {
         id: 'mc-birthday',
         month: 4,
