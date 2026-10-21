@@ -11,7 +11,9 @@
     <!-- Collegamenti a fogli di stile e librerie -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lightbox.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.17/dist/purify.min.js" integrity="sha384-P0JNneQf81HOl9VwNXK76cQ9VMD6Nfsnepxb0cCOg8+UzEdzgPHAPV4wVQrvYQSx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js" integrity="sha384-948ahk4ZmxYVYOc+rxN1H2gM1EJ2Duhp7uHtZ4WSLkV4Vtx5MUqnV+l7u9B+jFv+" crossorigin="anonymous"></script>
+    <script src="markdown-security.js"></script>
     <script src="translate.js"></script>
     <script defer src="lightbox.js"></script>
     <script defer src="image-optimizer.js"></script>
@@ -105,7 +107,6 @@
             mangle: false,
             headerPrefix: '',
             breaks: true,
-            sanitize: false // Permette HTML nel markdown
         });
 
         // Recupera il parametro file dall'URL
@@ -158,12 +159,10 @@
                     return response.text();
                 })
                 .then(text => {
-                    // Rimuovi solo i tag HTML pericolosi
-                    text = text.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
                     // normalizza i livelli dei titoli nel markdown
                     text = text.replace(/^##\s+Highlights\s*$/m, '# Highlights');
                     text = text.replace(/^#\s+(_[^_]+_:?)/gmi, '## $1');
-                    let content = marked.parse(text);
+                    let content = renderMarkdown(text);
                     
                     // Carica le versioni di manutenzione se presenti
                     if (metadata && metadata.maintenanceVersions) {
@@ -173,7 +172,7 @@
                         const maintenancePromises = visibleVersions.map(v => 
                             fetch(`posts-changelog/${v.file}`)
                                 .then(res => res.text())
-                                .then(maintenanceText => marked.parse(maintenanceText))
+                                .then(maintenanceText => renderMarkdown(maintenanceText))
                         );
 
                         Promise.all(maintenancePromises)
