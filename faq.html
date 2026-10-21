@@ -10,7 +10,9 @@
     <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lightbox.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.4.17/dist/purify.min.js" integrity="sha384-P0JNneQf81HOl9VwNXK76cQ9VMD6Nfsnepxb0cCOg8+UzEdzgPHAPV4wVQrvYQSx" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js" integrity="sha384-948ahk4ZmxYVYOc+rxN1H2gM1EJ2Duhp7uHtZ4WSLkV4Vtx5MUqnV+l7u9B+jFv+" crossorigin="anonymous"></script>
+    <script src="markdown-security.js"></script>
     <script src="translate.js"></script>
     <script defer src="lightbox.js"></script>
     <script defer src="image-optimizer.js"></script>
@@ -144,7 +146,7 @@
                 }
                 
                 const markdownText = await response.text();
-                const htmlContent = marked.parse(markdownText);
+                const htmlContent = renderMarkdown(markdownText);
                 
                 document.getElementById('faq-content').innerHTML = htmlContent;
                 // Notifica che il contenuto è stato inserito (usato dallo script della freccia)
