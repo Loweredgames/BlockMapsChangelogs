@@ -1,5 +1,5 @@
 const SITE_STATUS = {
-    maintenanceMode: false, // Imposta true per attivare la manutenzione
+    maintenanceMode: true, // Imposta true per attivare la manutenzione
     maintenancePage: 'offline.html'
 };
 
