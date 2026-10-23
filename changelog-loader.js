@@ -93,7 +93,7 @@ window.changelogList = [
     {
         title: 'Roadmap e Cambio di Versioni di Minecraft',
         date: '23.12.2025',
-        image: 'images/posts/Website/new-versions-mc.jpg',
+        image: 'images/posts/Website/new-versions-mc.png',
         file: 'Website/minecraft-versions-system.md',
         tags: ['minecraft-news'],
         visible: true
@@ -312,7 +312,7 @@ window.changelogList = [
     {
         title: 'JE-1.17.1-1.0.0-Apocalisse:BUILDING:16.10.2022a - Draft',
         date: '???',
-        image: 'images/posts/Apocalisse/first.png',
+        image: 'images/posts/Apocalisse/je-1.17.1-1.0.0_dev0.png',
         file: 'Apocalisse/je-1.17.1-1.0.0_dev0.md',
         tags: ['building','drafts'],
         visible: false
