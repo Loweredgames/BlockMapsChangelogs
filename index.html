@@ -4,6 +4,7 @@
     <!-- Meta tags per SEO e responsività -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consulta gli aggiornamenti e i changelog delle mappe Minecraft di Loweredgames, con versioni, novità e note di manutenzione.">
     <script src="status.js"></script>
     <title>Block Maps Changelogs</title>
     
@@ -16,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js" integrity="sha384-948ahk4ZmxYVYOc+rxN1H2gM1EJ2Duhp7uHtZ4WSLkV4Vtx5MUqnV+l7u9B+jFv+" crossorigin="anonymous"></script>
     <script src="translate.js"></script>
     <script defer src="image-optimizer.js"></script>
+    <script defer src="background-image-fallback.js"></script>
 </head>
 <body class="index-page">
     <!-- Header con titolo principale -->
@@ -42,6 +44,7 @@
             <section class="changelog-list">
                 <h2>Changelogs:</h2>
                 <div class="changelog-controls">
+                    <label class="visually-hidden" for="search-changelog">Cerca nei changelog</label>
                     <input type="text" 
                            id="search-changelog" 
                            placeholder="Cerca nei changelog..."
@@ -101,7 +104,7 @@
 
     <a class="copilot-badge" href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer" aria-label="Made by GitHub Copilot">
         <span class="copilot-badge__icon" aria-hidden="true">
-            <img src='images/icons/github_copilot/githubcopilot.png' alt="">
+            <img src="images/icons/github_copilot/githubcopilot.webp" alt="" onerror="this.onerror=null;this.src='images/icons/github_copilot/githubcopilot.png'">
         </span>
         <span class="copilot-badge_text">Made by Github Copilot</span>
     </a>
@@ -138,7 +141,7 @@
                 </a>
             </div>
             <p>&copy; <a href="license.html">LICENZE Loweredgames</a> - Tutti i diritti riservati.</p>
-            <i>Ultimo Aggiornamento: 17.10.2026 - 15:19</i>
+            <i>Ultimo Aggiornamento: 23.10.2026 - 20:14</i>
         </div>
     </footer>
 

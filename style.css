@@ -4,6 +4,18 @@
    - Font e colori principali
    - Layout di base
 =================================== */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -37,6 +49,10 @@ body::before {
 
     /* Immagine di sfondo default */
     background-image: url('images/background/default/minecraft.png');
+    background-image: image-set(
+        url('images/background/default/minecraft.webp') type('image/webp'),
+        url('images/background/default/minecraft.png') type('image/png')
+    );
 }
 
 /* Gestione sfondo per dispositivi mobili */
@@ -81,6 +97,10 @@ body::after {
 body.coming-update::before {
     background-color: #9e3e1177;
     background-image: url('images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.png');
+    background-image: image-set(
+        url('images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.webp') type('image/webp'),
+        url('images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_rc1.png') type('image/png')
+    );
 }
 
 /* MESI SEASONS (Background che cambiano in mese in mese per riflettere la stagione o il periodo) */
@@ -89,144 +109,240 @@ body.coming-update::before {
 body.gennaio1-seasons::before {
     background-color: #8c919730;
     background-image: url('images/background/holiday/seasons/gennaio/snow_taiga.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/gennaio/snow_taiga.webp') type('image/webp'),
+        url('images/background/holiday/seasons/gennaio/snow_taiga.png') type('image/png')
+    );
 }
 
 /* Gennaio 2 (SEASONS MESI)*/
 body.gennaio2-seasons::before {
     background-color: #d0afae30;
     background-image: url('images/background/holiday/seasons/gennaio/icestream.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/gennaio/icestream.webp') type('image/webp'),
+        url('images/background/holiday/seasons/gennaio/icestream.png') type('image/png')
+    );
 }
 
 /* Febbraio 1 (SEASONS MESI)*/
 body.febbraio1-seasons::before {
     background-color: #cbb8d730;
     background-image: url('images/background/holiday/seasons/febbrario/spices.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/febbrario/spices.webp') type('image/webp'),
+        url('images/background/holiday/seasons/febbrario/spices.png') type('image/png')
+    );
 }
 
 /* Febbraio 2 (SEASONS MESI)*/
 body.febbraio2-seasons::before {
     background-color: #a04fa030;
     background-image: url('images/background/holiday/seasons/febbrario/love_door.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/febbrario/love_door.webp') type('image/webp'),
+        url('images/background/holiday/seasons/febbrario/love_door.png') type('image/png')
+    );
 }
 
 /* Marzo 1 (SEASONS MESI)*/
 body.marzo1-seasons::before {
     background-color: #28723330;
     background-image: url('images/background/holiday/seasons/marzo/eye_lake.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/marzo/eye_lake.webp') type('image/webp'),
+        url('images/background/holiday/seasons/marzo/eye_lake.png') type('image/png')
+    );
 }
 
 /* Marzo 2 (SEASONS MESI)*/
 body.marzo2-seasons::before {
     background-color: #a7943730;
     background-image: url('images/background/holiday/seasons/marzo/glow_cave.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/marzo/glow_cave.webp') type('image/webp'),
+        url('images/background/holiday/seasons/marzo/glow_cave.png') type('image/png')
+    );
 }
 
 /* Aprile 1 (SEASONS MESI)*/
 body.aprile1-seasons::before {
     background-color: #ffd1dc30;
     background-image: url('images/background/holiday/seasons/aprile/mooshroom.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/aprile/mooshroom.webp') type('image/webp'),
+        url('images/background/holiday/seasons/aprile/mooshroom.png') type('image/png')
+    );
 }
 
 /* Aprile 2 (SEASONS MESI)*/
 body.aprile2-seasons::before {
     background-color: #eae6ca30;
     background-image: url('images/background/holiday/seasons/aprile/frog.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/aprile/frog.webp') type('image/webp'),
+        url('images/background/holiday/seasons/aprile/frog.png') type('image/png')
+    );
 }
 
 /* Maggio 1 (SEASONS MESI)*/
 body.maggio1-seasons::before {
     background-color: #00bb2d30;
     background-image: url('images/background/holiday/seasons/maggio/river.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/maggio/river.webp') type('image/webp'),
+        url('images/background/holiday/seasons/maggio/river.png') type('image/png')
+    );
 }
 
 /* Maggio 2 (SEASONS MESI)*/
 body.maggio2-seasons::before {
     background-color: #a8477830;
     background-image: url('images/background/holiday/seasons/maggio/flowers.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/maggio/flowers.webp') type('image/webp'),
+        url('images/background/holiday/seasons/maggio/flowers.png') type('image/png')
+    );
 }
 
 /* Giugno 1 (SEASONS MESI)*/
 body.giugno1-seasons::before {
     background-color: #99ffcc30;
     background-image: url('images/background/holiday/seasons/giugno/jungle_temple.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/giugno/jungle_temple.webp') type('image/webp'),
+        url('images/background/holiday/seasons/giugno/jungle_temple.png') type('image/png')
+    );
 }
 
 /* Giugno 2 (SEASONS MESI)*/
 body.giugno2-seasons::before {
     background-color: #f3f3ea30;
     background-image: url('images/background/holiday/seasons/giugno/village.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/giugno/village.webp') type('image/webp'),
+        url('images/background/holiday/seasons/giugno/village.png') type('image/png')
+    );
 }
 
 /* Luglio 1 (SEASONS MESI)*/
 body.luglio1-seasons::before {
     background-color: #ff990030;
     background-image: url('images/background/holiday/seasons/luglio/rabbit_desert.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/luglio/rabbit_desert.webp') type('image/webp'),
+        url('images/background/holiday/seasons/luglio/rabbit_desert.png') type('image/png')
+    );
 }
 
 /* Luglio 2 (SEASONS MESI)*/
 body.luglio2-seasons::before {
     background-color: #343a9030;
     background-image: url('images/background/holiday/seasons/luglio/badland.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/luglio/badland.webp') type('image/webp'),
+        url('images/background/holiday/seasons/luglio/badland.png') type('image/png')
+    );
 }
 
 /* Agosto 1 (SEASONS MESI)*/
 body.agosto1-seasons::before {
     background-color: #a6102230;
     background-image: url('images/background/holiday/seasons/agosto/gold_piglin.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/agosto/gold_piglin.webp') type('image/webp'),
+        url('images/background/holiday/seasons/agosto/gold_piglin.png') type('image/png')
+    );
 }
 
 /* Agosto 2 (SEASONS MESI)*/
 body.agosto2-seasons::before {
     background-color: #9b8b4530;
     background-image: url('images/background/holiday/seasons/agosto/fortress.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/agosto/fortress.webp') type('image/webp'),
+        url('images/background/holiday/seasons/agosto/fortress.png') type('image/png')
+    );
 }
 
 /* Settembre 1 (SEASONS MESI)*/
 body.settembre1-seasons::before {
     background-color: #99672e30;
     background-image: url('images/background/holiday/seasons/settembre/fall.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/settembre/fall.webp') type('image/webp'),
+        url('images/background/holiday/seasons/settembre/fall.png') type('image/png')
+    );
 }
 
 /* Settembre 2 (SEASONS MESI)*/
 body.settembre2-seasons::before {
     background-color: #83243c30;
     background-image: url('images/background/holiday/seasons/settembre/light_cave.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/settembre/light_cave.webp') type('image/webp'),
+        url('images/background/holiday/seasons/settembre/light_cave.png') type('image/png')
+    );
 }
 
 /* Ottobre 1 (SEASONS MESI)*/
 body.ottobre1-seasons::before {
     background-color: #883d1a30;
     background-image: url('images/background/holiday/seasons/ottobre/eyeblossom.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/ottobre/eyeblossom.webp') type('image/webp'),
+        url('images/background/holiday/seasons/ottobre/eyeblossom.png') type('image/png')
+    );
 }
 
 /* Ottobre 2 (SEASONS MESI)*/
 body.ottobre2-seasons::before {
     background-color: #50000030;
     background-image: url('images/background/holiday/seasons/ottobre/night_moon.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/ottobre/night_moon.webp') type('image/webp'),
+        url('images/background/holiday/seasons/ottobre/night_moon.png') type('image/png')
+    );
 }
 
 /* Novembre 1 (SEASONS MESI)*/
 body.novembre1-seasons::before {
     background-color: #c1c2be30;
     background-image: url('images/background/holiday/seasons/novembre/rain_forest.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/novembre/rain_forest.webp') type('image/webp'),
+        url('images/background/holiday/seasons/novembre/rain_forest.png') type('image/png')
+    );
 }
 
 /* Novembre 2 (SEASONS MESI)*/
 body.novembre2-seasons::before {
     background-color: #0e398830;
     background-image: url('images/background/holiday/seasons/novembre/in_night_pillager_outpost.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/novembre/in_night_pillager_outpost.webp') type('image/webp'),
+        url('images/background/holiday/seasons/novembre/in_night_pillager_outpost.png') type('image/png')
+    );
 }
 
 /* Dicembre 1 (SEASONS MESI)*/
 body.dicembre1-seasons::before {
     background-color: #500b0b30;
     background-image: url('images/background/holiday/seasons/dicembre/snow_mountain.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/dicembre/snow_mountain.webp') type('image/webp'),
+        url('images/background/holiday/seasons/dicembre/snow_mountain.png') type('image/png')
+    );
 }
 
 /* Dicembre 2 (SEASONS MESI)*/
 body.dicembre2-seasons::before {
     background-color: #ffffff30;
     background-image: url('images/background/holiday/seasons/dicembre/snowstorm.png');
+    background-image: image-set(
+        url('images/background/holiday/seasons/dicembre/snowstorm.webp') type('image/webp'),
+        url('images/background/holiday/seasons/dicembre/snowstorm.png') type('image/png')
+    );
 }
 
 
@@ -235,6 +351,10 @@ body.dicembre2-seasons::before {
 body.mc-birthday::before {
     background-color: #29692e30;
     background-image: url('images/background/holiday/mc-birthday/nostalgic_hills.png');
+    background-image: image-set(
+        url('images/background/holiday/mc-birthday/nostalgic_hills.webp') type('image/webp'),
+        url('images/background/holiday/mc-birthday/nostalgic_hills.png') type('image/png')
+    );
 }
 
 body.mc-birthday header h1 {
@@ -251,6 +371,10 @@ body.mc-birthday header h1::before {
     width: 4rem;
     height: 4rem;
     background-image: url('images/background/holiday/mc-birthday/CreeperArtwork.png');
+    background-image: image-set(
+        url('images/background/holiday/mc-birthday/CreeperArtwork.webp') type('image/webp'),
+        url('images/background/holiday/mc-birthday/CreeperArtwork.png') type('image/png')
+    );
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -261,6 +385,10 @@ body.mc-birthday header h1::before {
 body.christmas::before {
     background-color: #0b253a30;
     background-image: url('images/background/holiday/christmas/draft.png');
+    background-image: image-set(
+        url('images/background/holiday/christmas/draft.webp') type('image/webp'),
+        url('images/background/holiday/christmas/draft.png') type('image/png')
+    );
     background-blend-mode: normal, screen, screen;
     filter: blur(2px) brightness(1.05);
 }
@@ -550,6 +678,10 @@ body.christmas .christmas-snowflake {
 body.april-fools::before {
     background-color: #14122a30;
     background-image: url('images/background/holiday/april_fools/april_fools2026.png');
+    background-image: image-set(
+        url('images/background/holiday/april_fools/april_fools2026.webp') type('image/webp'),
+        url('images/background/holiday/april_fools/april_fools2026.png') type('image/png')
+    );
     background-size: cover;
     background-blend-mode: screen, screen, screen;
     filter: blur(2px) brightness(1.08);
@@ -1930,10 +2062,32 @@ footer {
     border: 2px solid #2d2d2d;
     padding: 1.5rem;
     height: fit-content;
+    max-height: calc(100vh - 6.5rem);
     position: sticky;
     top: 2rem;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-color: #4a4a4a #1a1a1a;
+    scrollbar-width: thin;
+}
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: #4a4a4a;
+    border: 2px solid #1a1a1a;
+    border-radius: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background-color: #6a6a6a;
 }
 
 .sidebar h1 {
@@ -1986,8 +2140,10 @@ footer {
     .sidebar {
         width: 100%;
         position: static;
+        order: -1;
         margin-top: 2rem;
         max-width: 100%;
+        max-height: 64vh;
     }
 
     .project-links {
@@ -2090,7 +2246,7 @@ footer {
     }
 
     .changelog-card {
-        width: 280px;
+        width: 300px;
     }
 
 
@@ -2446,11 +2602,12 @@ footer {
 /* Scroll arrow styles (usato in view-changelog.html) */
 #scroll-arrow {
     position: fixed;
-    right: 90px;
-    bottom: 30%;
+    right: 65px;
+    bottom: 6.5rem;
     width: 56px;
     height: 56px;
     background: rgba(32, 32, 32, 0.7);
+    border: 2px solid #7c4dff5e;
     color: #ffffff;
     display: flex;
     align-items: center;
@@ -2463,7 +2620,7 @@ footer {
     pointer-events: none;
     transform: translateX(12px);
     transition: opacity 180ms ease, transform 180ms ease, background-color 160ms ease;
-    z-index: 1000;
+    z-index: 1200;
     text-decoration: none;
 }
 #scroll-arrow.visible {
@@ -2483,9 +2640,11 @@ footer {
     #scroll-arrow svg { width: 20px; height: 20px; }
 }
 
-/* Override posizione per la sola pagina index: evita sovrapposizioni con elementi della pagina */
+/* Nella home la freccia resta in basso a sinistra, lontana dalla sidebar e da Copilot. */
 .index-page #scroll-arrow {
-    right: 60px;    /* più vicino al bordo destro su index */
-    bottom: 30%;
-    z-index: 1200;  /* assicurati sia sopra gli altri elementi */
+    right: 23rem;
+    width: 56px;
+    background: rgba(32, 32, 32, 0.7);
+    bottom: 6.5rem;
+    z-index: 1200;
 }
