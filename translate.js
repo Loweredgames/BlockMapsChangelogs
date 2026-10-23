@@ -66,7 +66,7 @@ function loadTranslateWidget() {
     // Crea e configura il container per il widget
     const googleDiv = document.createElement('div');
     googleDiv.id = 'google_translate_element';
-    googleDiv.style.position = 'fixed';
+    googleDiv.style.position = document.body.classList.contains('index-page') ? 'absolute' : 'fixed';
     googleDiv.style.top = '1rem';
     googleDiv.style.right = '1rem';
     googleDiv.style.zIndex = '1000';
@@ -153,7 +153,7 @@ function loadTranslateWidget() {
 
     // Carica lo script di Google Translate
     const script = document.createElement('script');
-    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     document.body.appendChild(script);
 }
 
