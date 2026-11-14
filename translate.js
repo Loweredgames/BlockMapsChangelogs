@@ -201,7 +201,7 @@ const holidays = [
         startDay: 22,
         endDay: 24,
         className: 'voidblock-birthday',
-        iconPath: 'images/favicon.ico'
+        iconPath: 'images/icons/voidblock-birthday/favicon.ico'
     },
 
     // Compleanno di Minecraft
