@@ -190,6 +190,16 @@ const holidays = [
         iconPath: 'images/icons/april_fools/favicon.ico'
     },
     
+    // Compleanno Voidblock
+    {
+        id: 'voidblock-birthday',
+        month: 10,
+        startDay: 22,
+        endDay: 24,
+        className: 'voidblock-birthday',
+        iconPath: 'images/favicon.ico'
+    },
+
     // Compleanno di Minecraft
     {
         id: 'mc-birthday',
@@ -510,32 +520,55 @@ function updateFaviconForEvent(event) {
     return;
 }
 
-// Crea l'effetto confetti per il tema Pesce d'Aprile.
-function launchAprilFoolsConfetti() {
+// Crea i coriandoli condivisi tra i temi che li utilizzano.
+function createConfettiOverlay(className, colors, count, getDelay, getDuration) {
     const overlay = document.createElement('div');
-    overlay.className = 'april-fools-confetti';
-    const colors = ['#ffeb3b', '#ff4081', '#40c4ff', '#76ff03', '#ffffff'];
+    overlay.className = className;
 
-    // Crea 18 pezzi di confetti con posizioni, dimensioni, colori e animazioni casuali.
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < count; i++) {
         const piece = document.createElement('span');
         piece.style.left = `${Math.random() * 100}%`;
         piece.style.top = `${-10 - Math.random() * 10}%`;
         piece.style.width = `${6 + Math.random() * 10}px`;
         piece.style.height = piece.style.width;
         piece.style.backgroundColor = colors[i % colors.length];
-        piece.style.animationDelay = `${Math.random() * 0.6}s`;
-        piece.style.animationDuration = `${2 + Math.random() * 1.5}s`;
+        piece.style.animationDelay = getDelay();
+        piece.style.animationDuration = getDuration();
         piece.style.opacity = `${0.8 + Math.random() * 0.2}`;
         overlay.appendChild(piece);
     }
-    // Aggiunge l'overlay dei confetti al body e lo rimuove dopo l'animazione.
+
     document.body.appendChild(overlay);
+    return overlay;
+}
+
+// Avvia i coriandoli temporanei del Pesce d'Aprile.
+function launchAprilFoolsConfetti() {
+    const overlay = createConfettiOverlay(
+        'april-fools-confetti',
+        ['#ffeb3b', '#ff4081', '#40c4ff', '#76ff03', '#ffffff'],
+        18,
+        () => `${Math.random() * 0.6}s`,
+        () => `${2 + Math.random() * 1.5}s`
+    );
+
+    // I coriandoli del Pesce d'Aprile svaniscono dopo la loro animazione.
     window.setTimeout(() => {
         overlay.style.transition = 'opacity 0.8s ease';
         overlay.style.opacity = '0';
         window.setTimeout(() => overlay.remove(), 800);
     }, 6500);
+}
+
+// Mantiene i coriandoli attivi durante il compleanno di Voidblock.
+function launchVoidblockBirthdayConfetti() {
+    createConfettiOverlay(
+        'voidblock-birthday-confetti',
+        ['#39d353', '#39c5ff', '#7cff8b', '#8be9ff', '#ffffff'],
+        36,
+        () => `${-Math.random() * 5}s`,
+        () => `${3 + Math.random() * 3}s`
+    );
 }
 
 // Crea un effetto neve esclusivo per il Natale.
@@ -573,6 +606,82 @@ function applySiteTheme() {
     // Aggiungi effetti speciali per eventi specifici.
     if (event.id === 'april-fools') {
         launchAprilFoolsConfetti();
+    }
+    if (event.id === 'voidblock-birthday') {
+        const title = document.querySelector('header h1');
+        if (title) {
+            const greeting = document.createElement('span');
+            greeting.className = 'voidblock-birthday-greeting';
+            greeting.textContent = 'Happy Birthday! ';
+
+            const voidName = document.createElement('span');
+            voidName.className = 'voidblock-birthday-void';
+            voidName.textContent = 'Void';
+
+            const blockName = document.createElement('span');
+            blockName.className = 'voidblock-birthday-block';
+            blockName.textContent = 'Block!';
+
+            title.replaceChildren(greeting, voidName, blockName);
+
+            const birthday = new Date();
+            const anniversary = new Date(birthday.getFullYear(), 10, 23);
+            // L'età aumenta soltanto il 23 novembre.
+            const years = birthday.getFullYear() - 2020 - (birthday < anniversary ? 1 : 0);
+            const subtitle = document.createElement('p');
+            subtitle.className = 'voidblock-birthday-subtitle';
+
+            const ageNumber = document.createElement('span');
+            ageNumber.className = 'voidblock-birthday-age';
+            ageNumber.textContent = `${years} `;
+
+            const yearsLabel = document.createElement('span');
+            yearsLabel.className = 'voidblock-birthday-years';
+            yearsLabel.textContent = 'Years ';
+
+            const oldLabel = document.createElement('span');
+            oldLabel.className = 'voidblock-birthday-old';
+            oldLabel.textContent = 'Old!!!';
+
+            subtitle.replaceChildren(ageNumber, yearsLabel, oldLabel);
+            title.insertAdjacentElement('afterend', subtitle);
+
+            // Ogni riga descrive un livello dell'isola; i simboli indicano il tipo di blocco.
+            const islandPixels = [
+                '....L....',
+                '...LLL...',
+                '....T....',
+                '....T....',
+                '.GGGGGGG.',
+                '..DDDDD..',
+                '...DDD...',
+                '....S....'
+            ];
+            const pixelTypes = {
+                L: 'leaves',
+                T: 'trunk',
+                G: 'grass',
+                D: 'dirt',
+                S: 'stone'
+            };
+            const island = document.createElement('a');
+            island.className = 'voidblock-birthday-island';
+            island.href = 'https://modrinth.com/datapack/voidblock-portable';
+            island.setAttribute('aria-label', 'Visita Voidblock su CurseForge');
+
+            for (const row of islandPixels) {
+                for (const pixel of row) {
+                    const block = document.createElement('span');
+                    block.className = pixel === '.'
+                        ? 'voidblock-birthday-island-empty'
+                        : `voidblock-birthday-island-pixel voidblock-birthday-island-${pixelTypes[pixel]}`;
+                    island.appendChild(block);
+                }
+            }
+
+            subtitle.insertAdjacentElement('afterend', island);
+        }
+        launchVoidblockBirthdayConfetti();
     }
     if (event.id === 'christmas') {
         launchChristmasSnow();
