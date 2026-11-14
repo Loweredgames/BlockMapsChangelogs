@@ -555,6 +555,8 @@ function searchChangelogs(searchTerm) {
 // Funzione per aggiornare la griglia dei changelog dopo un filtro o una ricerca.
 function refreshChangelogGrid(changelogs) {
     const grid = document.getElementById('changelog-grid');
+    if (!grid) return;
+
     grid.innerHTML = '';
     changelogs.forEach(changelog => {
         const card = createChangelogCard(changelog);
@@ -571,23 +573,24 @@ function copyChangelogLink(file) {
 
 // Funzione per filtrare i changelog in base al tag selezionato.
 function filterChangelogsByTag(tag) {
-    const results = getVisibleChangelogs()
-        .filter(changelog => 
-            changelog.tags && changelog.tags.includes(tag)
-        );
+    const results = getVisibleChangelogs().filter(changelog =>
+        changelog.tags && changelog.tags.includes(tag)
+    );
     refreshChangelogGrid(results);
 }
 
 // Funzione per inizializzare i pulsanti dei filtri tag.
 function initializeTagFilters() {
     const tagFilters = document.querySelectorAll('.tag-filter');
+    if (!tagFilters.length) return;
+
     tagFilters.forEach(filter => {
+        if (filter.dataset.bound === 'true') return;
+        filter.dataset.bound = 'true';
+
         filter.addEventListener('click', () => {
-            // Rimuovi la classe active da tutti i filtri
             tagFilters.forEach(f => f.classList.remove('active'));
-            // Aggiungi la classe active al filtro cliccato
             filter.classList.add('active');
-            
             const tag = filter.dataset.tag;
             if (tag === 'all') {
                 refreshChangelogGrid(getVisibleChangelogs());

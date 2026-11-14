@@ -63,6 +63,10 @@
 
 // Funzione per caricare e inizializzare il widget di Google Translate
 function loadTranslateWidget() {
+    if (document.getElementById('google_translate_element') || document.querySelector('script[src*="translate.google.com/translate_a/element.js"]')) {
+        return;
+    }
+
     // Crea e configura il container per il widget
     const googleDiv = document.createElement('div');
     googleDiv.id = 'google_translate_element';
@@ -211,249 +215,58 @@ const holidays = [
     }
 ];
 
-// Lista degli eventi (priorità bassa, sovrascrivono il tema default).
-const events = [
-    
-    // Gennaio 1 (SEASONS MESI)
-    {
-        id: 'gennaio1-seasons',
-        month: 0,
-        startDay: 5,
-        endDay: 15,
-        className: 'gennaio1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Gennaio 2 (SEASONS MESI)
-    {
-        id: 'gennaio1-seasons',
-        month: 0,
-        startDay: 16,
-        endDay: 31,
-        className: 'gennaio2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Febbraio 1 (SEASONS MESI)
-    {
-        id: 'febbraio1-seasons',
-        month: 1,
-        startDay: 1,
-        endDay: 15,
-        className: 'febbraio1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Febbraio 2 (SEASONS MESI)
-    {
-        id: 'febbraio2-seasons',
-        month: 1,
-        startDay: 16,
-        endDay: 29,
-        className: 'febbraio2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Marzo 1 (SEASONS MESI)
-    {
-        id: 'marzo1-seasons',
-        month: 2,
-        startDay: 1,
-        endDay: 15,
-        className: 'marzo1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Marzo 2 (SEASONS MESI)
-    {
-        id: 'marzo2-seasons',
-        month: 2,
-        startDay: 16,
-        endDay: 31,
-        className: 'marzo2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Aprile 1 (SEASONS MESI)
-    {
-        id: 'aprile1-seasons',
-        month: 3,
-        startDay: 1,
-        endDay: 15,
-        className: 'aprile1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Aprile 2 (SEASONS MESI)
-    {
-        id: 'aprile2-seasons',
-        month: 3,
-        startDay: 16,
-        endDay: 31,
-        className: 'aprile2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Maggio 1 (SEASONS MESI)
-    {
-        id: 'maggio1-seasons',
-        month: 4,
-        startDay: 1,
-        endDay: 15,
-        className: 'maggio1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Maggio 2 (SEASONS MESI)
-    {
-        id: 'maggio2-seasons',
-        month: 4,
-        startDay: 16,
-        endDay: 31,
-        className: 'maggio2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Giugno 1 (SEASONS MESI)
-    {
-        id: 'giugno1-seasons',
-        month: 5,
-        startDay: 1,
-        endDay: 15,
-        className: 'giugno1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Giugno 2 (SEASONS MESI)
-    {
-        id: 'giugno2-seasons',
-        month: 5,
-        startDay: 16,
-        endDay: 31,
-        className: 'giugno2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Luglio 1 (SEASONS MESI)
-    {
-        id: 'luglio1-seasons',
-        month: 6,
-        startDay: 1,
-        endDay: 15,
-        className: 'luglio1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Luglio 2 (SEASONS MESI)
-    {
-        id: 'luglio2-seasons',
-        month: 6,
-        startDay: 16,
-        endDay: 31,
-        className: 'luglio2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Agosto 1 (SEASONS MESI)
-    {
-        id: 'agosto1-seasons',
-        month: 7,
-        startDay: 1,
-        endDay: 15,
-        className: 'agosto1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Agosto 2 (SEASONS MESI)
-    {
-        id: 'agosto2-seasons',
-        month: 7,
-        startDay: 16,
-        endDay: 31,
-        className: 'agosto2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Settembre 1 (SEASONS MESI)
-    {
-        id: 'settembre1-seasons',
-        month: 8,
-        startDay: 1,
-        endDay: 15,
-        className: 'settembre1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Settembre 2 (SEASONS MESI)
-    {
-        id: 'settembre2-seasons',
-        month: 8,
-        startDay: 16,
-        endDay: 31,
-        className: 'settembre2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Ottobre 1 (SEASONS MESI)
-    {
-        id: 'ottobre1-seasons',
-        month: 9,
-        startDay: 1,
-        endDay: 15,
-        className: 'ottobre1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Ottobre 2 (SEASONS MESI)
-    {
-        id: 'ottobre2-seasons',
-        month: 9,
-        startDay: 16,
-        endDay: 31,
-        className: 'ottobre2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Novembre 1 (SEASONS MESI)
-    {
-        id: 'novembre1-seasons',
-        month: 10,
-        startDay: 1,
-        endDay: 15,
-        className: 'novembre1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Novembre 2 (SEASONS MESI)
-    {
-        id: 'novembre2-seasons',
-        month: 10,
-        startDay: 16,
-        endDay: 31,
-        className: 'novembre2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Dicembre 1 (SEASONS MESI)
-    {
-        id: 'dicembre1-seasons',
-        month: 11,
-        startDay: 1,
-        endDay: 15,
-        className: 'dicembre1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Dicembre 2 (SEASONS MESI)
-    {
-        id: 'dicembre2-seasons',
-        month: 11,
-        startDay: 16,
-        endDay: 31,
-        className: 'dicembre2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
+// Lista degli eventi stagionali (priorità bassa, sovrascrivono il tema default).
+// Generata in modo dinamico per evitare duplicati e correggere i range di mesi con lunghezza diversa.
+const SEASONAL_MONTHS = [
+    { label: 'gennaio', month: 0 },
+    { label: 'febbraio', month: 1 },
+    { label: 'marzo', month: 2 },
+    { label: 'aprile', month: 3 },
+    { label: 'maggio', month: 4 },
+    { label: 'giugno', month: 5 },
+    { label: 'luglio', month: 6 },
+    { label: 'agosto', month: 7 },
+    { label: 'settembre', month: 8 },
+    { label: 'ottobre', month: 9 },
+    { label: 'novembre', month: 10 },
+    { label: 'dicembre', month: 11 }
 ];
+
+function getMonthLastDay(month, year) {
+    return new Date(year, month + 1, 0).getDate();
+}
+
+const MAX_SEASON_DAY = 31;
+
+function createSeasonalEvents() {
+    return SEASONAL_MONTHS.flatMap(({ label, month }) => {
+        const lastDay = getMonthLastDay(month, new Date().getFullYear());
+        const firstRange = month === 0
+            ? { startDay: 5, endDay: 15 }
+            : { startDay: 1, endDay: Math.min(15, lastDay, MAX_SEASON_DAY) };
+
+        return [
+            {
+                id: `${label}1-seasons`,
+                month,
+                startDay: firstRange.startDay,
+                endDay: firstRange.endDay,
+                className: `${label}1-seasons`,
+                iconPath: 'images/icons/favicon.ico'
+            },
+            {
+                id: `${label}2-seasons`,
+                month,
+                startDay: 16,
+                endDay: Math.min(lastDay, MAX_SEASON_DAY),
+                className: `${label}2-seasons`,
+                iconPath: 'images/icons/favicon.ico'
+            }
+        ];
+    });
+}
+
+const events = createSeasonalEvents();
 
 // Template (può essere usato per aggiungere altri eventi o festività)
 const template_dummy = { // NON USARE, SERVE SOLO COME SEPARATORE. aggiungere in const holidays/events
