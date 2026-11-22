@@ -4,8 +4,8 @@
 
 // Qui puoi scegliere quale post in evidenzia mostrare in homepage.
 window.featuredPostConfig = {
-    file: 'Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_stable.md',
-    description: 'Il Wilderness Bound Drop è arrivato: esplora le tre nuove isole autunnali, con tanti blocchi decorativi, un nuovo letto esplorativo e i cuscini, dove finalmente ti puoi sedere in Minecraft!!!'
+    file: 'Voidblock/7.3.0/je-26.1.2-26.3-7.3.3_stable.md',
+    description: 'Scopri la nuova struttura misteriosa in giro nel mondo, festeggiamo il 5° compleanno della Voidblock tutti insieme, Adesso puoi anche fabbricare i blocchi erba nella nuova versione appena rilascita!!!'
 };
 
 // ===================================
@@ -18,6 +18,14 @@ window.changelogList = [
 
 // Post Rilasciati
     
+    {
+        title: 'JE-26.1.2>26.3-7.3.3-Voidblock:7.3.3',
+        date: '22.11.2026',
+        image: 'images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.3_stable.png',
+        file: 'Voidblock/7.3.0/je-26.1.2-26.4-7.3.3_stable.md',
+        tags: ['stable'],
+        visible: true
+    },
     {
         title: 'JE-26.1.2>26.3-7.3.2-Voidblock:7.3.2',
         date: '17.10.2026',
@@ -555,6 +563,8 @@ function searchChangelogs(searchTerm) {
 // Funzione per aggiornare la griglia dei changelog dopo un filtro o una ricerca.
 function refreshChangelogGrid(changelogs) {
     const grid = document.getElementById('changelog-grid');
+    if (!grid) return;
+
     grid.innerHTML = '';
     changelogs.forEach(changelog => {
         const card = createChangelogCard(changelog);
@@ -571,23 +581,24 @@ function copyChangelogLink(file) {
 
 // Funzione per filtrare i changelog in base al tag selezionato.
 function filterChangelogsByTag(tag) {
-    const results = getVisibleChangelogs()
-        .filter(changelog => 
-            changelog.tags && changelog.tags.includes(tag)
-        );
+    const results = getVisibleChangelogs().filter(changelog =>
+        changelog.tags && changelog.tags.includes(tag)
+    );
     refreshChangelogGrid(results);
 }
 
 // Funzione per inizializzare i pulsanti dei filtri tag.
 function initializeTagFilters() {
     const tagFilters = document.querySelectorAll('.tag-filter');
+    if (!tagFilters.length) return;
+
     tagFilters.forEach(filter => {
+        if (filter.dataset.bound === 'true') return;
+        filter.dataset.bound = 'true';
+
         filter.addEventListener('click', () => {
-            // Rimuovi la classe active da tutti i filtri
             tagFilters.forEach(f => f.classList.remove('active'));
-            // Aggiungi la classe active al filtro cliccato
             filter.classList.add('active');
-            
             const tag = filter.dataset.tag;
             if (tag === 'all') {
                 refreshChangelogGrid(getVisibleChangelogs());
