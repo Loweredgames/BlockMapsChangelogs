@@ -4,8 +4,8 @@
 
 // Qui puoi scegliere quale post in evidenzia mostrare in homepage.
 window.featuredPostConfig = {
-    file: 'Voidblock/7.3.0/je-26.1.2-26.3-7.3.2_stable.md',
-    description: 'Il Wilderness Bound Drop è arrivato: esplora le tre nuove isole autunnali, con tanti blocchi decorativi, un nuovo letto esplorativo e i cuscini, dove finalmente ti puoi sedere in Minecraft!!!'
+    file: 'Voidblock/7.3.0/je-26.1.2-26.3-7.3.3_stable.md',
+    description: 'Scopri la nuova struttura misteriosa in giro nel mondo, festeggiamo il 5° compleanno della Voidblock tutti insieme, Adesso puoi anche fabbricare i blocchi erba nella nuova versione appena rilascita!!!'
 };
 
 // ===================================
@@ -20,10 +20,10 @@ window.changelogList = [
     
     {
         title: 'JE-26.1.2>26.3-7.3.3-Voidblock:7.3.3',
-        date: '???',
-        image: 'images/drafts/draft.png',
+        date: '22.11.2026',
+        image: 'images/posts/Voidblock/7.3.0/je-26.1.2-26.3-7.3.3_stable.png',
         file: 'Voidblock/7.3.0/je-26.1.2-26.4-7.3.3_stable.md',
-        tags: ['stable','drafts'],
+        tags: ['stable'],
         visible: true
     },
     {
