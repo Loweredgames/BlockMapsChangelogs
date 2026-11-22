@@ -63,6 +63,10 @@
 
 // Funzione per caricare e inizializzare il widget di Google Translate
 function loadTranslateWidget() {
+    if (document.getElementById('google_translate_element') || document.querySelector('script[src*="translate.google.com/translate_a/element.js"]')) {
+        return;
+    }
+
     // Crea e configura il container per il widget
     const googleDiv = document.createElement('div');
     googleDiv.id = 'google_translate_element';
@@ -190,7 +194,17 @@ const holidays = [
         iconPath: 'images/icons/april_fools/favicon.ico'
     },
     
-    // Compleanno di Minecraft TO DO
+    // Compleanno Voidblock
+    {
+        id: 'voidblock-birthday',
+        month: 10,
+        startDay: 22,
+        endDay: 24,
+        className: 'voidblock-birthday',
+        iconPath: 'images/icons/voidblock-birthday/favicon.ico'
+    },
+
+    // Compleanno di Minecraft
     {
         id: 'mc-birthday',
         month: 4,
@@ -201,249 +215,58 @@ const holidays = [
     }
 ];
 
-// Lista degli eventi (priorità bassa, sovrascrivono il tema default).
-const events = [
-    
-    // Gennaio 1 (SEASONS MESI)
-    {
-        id: 'gennaio1-seasons',
-        month: 0,
-        startDay: 5,
-        endDay: 15,
-        className: 'gennaio1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Gennaio 2 (SEASONS MESI)
-    {
-        id: 'gennaio1-seasons',
-        month: 0,
-        startDay: 16,
-        endDay: 31,
-        className: 'gennaio2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Febbraio 1 (SEASONS MESI)
-    {
-        id: 'febbraio1-seasons',
-        month: 1,
-        startDay: 1,
-        endDay: 15,
-        className: 'febbraio1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Febbraio 2 (SEASONS MESI)
-    {
-        id: 'febbraio2-seasons',
-        month: 1,
-        startDay: 16,
-        endDay: 29,
-        className: 'febbraio2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Marzo 1 (SEASONS MESI)
-    {
-        id: 'marzo1-seasons',
-        month: 2,
-        startDay: 1,
-        endDay: 15,
-        className: 'marzo1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Marzo 2 (SEASONS MESI)
-    {
-        id: 'marzo2-seasons',
-        month: 2,
-        startDay: 16,
-        endDay: 31,
-        className: 'marzo2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Aprile 1 (SEASONS MESI)
-    {
-        id: 'aprile1-seasons',
-        month: 3,
-        startDay: 1,
-        endDay: 15,
-        className: 'aprile1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Aprile 2 (SEASONS MESI)
-    {
-        id: 'aprile2-seasons',
-        month: 3,
-        startDay: 16,
-        endDay: 31,
-        className: 'aprile2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Maggio 1 (SEASONS MESI)
-    {
-        id: 'maggio1-seasons',
-        month: 4,
-        startDay: 1,
-        endDay: 15,
-        className: 'maggio1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Maggio 2 (SEASONS MESI)
-    {
-        id: 'maggio2-seasons',
-        month: 4,
-        startDay: 16,
-        endDay: 31,
-        className: 'maggio2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Giugno 1 (SEASONS MESI)
-    {
-        id: 'giugno1-seasons',
-        month: 5,
-        startDay: 1,
-        endDay: 15,
-        className: 'giugno1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Giugno 2 (SEASONS MESI)
-    {
-        id: 'giugno2-seasons',
-        month: 5,
-        startDay: 16,
-        endDay: 31,
-        className: 'giugno2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Luglio 1 (SEASONS MESI)
-    {
-        id: 'luglio1-seasons',
-        month: 6,
-        startDay: 1,
-        endDay: 15,
-        className: 'luglio1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Luglio 2 (SEASONS MESI)
-    {
-        id: 'luglio2-seasons',
-        month: 6,
-        startDay: 16,
-        endDay: 31,
-        className: 'luglio2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Agosto 1 (SEASONS MESI)
-    {
-        id: 'agosto1-seasons',
-        month: 7,
-        startDay: 1,
-        endDay: 15,
-        className: 'agosto1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Agosto 2 (SEASONS MESI)
-    {
-        id: 'agosto2-seasons',
-        month: 7,
-        startDay: 16,
-        endDay: 31,
-        className: 'agosto2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Settembre 1 (SEASONS MESI)
-    {
-        id: 'settembre1-seasons',
-        month: 8,
-        startDay: 1,
-        endDay: 15,
-        className: 'settembre1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Settembre 2 (SEASONS MESI)
-    {
-        id: 'settembre2-seasons',
-        month: 8,
-        startDay: 16,
-        endDay: 31,
-        className: 'settembre2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Ottobre 1 (SEASONS MESI)
-    {
-        id: 'ottobre1-seasons',
-        month: 9,
-        startDay: 1,
-        endDay: 15,
-        className: 'ottobre1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Ottobre 2 (SEASONS MESI)
-    {
-        id: 'ottobre2-seasons',
-        month: 9,
-        startDay: 16,
-        endDay: 31,
-        className: 'ottobre2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Novembre 1 (SEASONS MESI)
-    {
-        id: 'novembre1-seasons',
-        month: 10,
-        startDay: 1,
-        endDay: 15,
-        className: 'novembre1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Novembre 2 (SEASONS MESI)
-    {
-        id: 'novembre2-seasons',
-        month: 10,
-        startDay: 16,
-        endDay: 31,
-        className: 'novembre2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-    
-    // Dicembre 1 (SEASONS MESI)
-    {
-        id: 'dicembre1-seasons',
-        month: 11,
-        startDay: 1,
-        endDay: 15,
-        className: 'dicembre1-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
-
-    // Dicembre 2 (SEASONS MESI)
-    {
-        id: 'dicembre2-seasons',
-        month: 11,
-        startDay: 16,
-        endDay: 31,
-        className: 'dicembre2-seasons',
-        iconPath: 'images/icons/favicon.ico'
-    },
+// Lista degli eventi stagionali (priorità bassa, sovrascrivono il tema default).
+// Generata in modo dinamico per evitare duplicati e correggere i range di mesi con lunghezza diversa.
+const SEASONAL_MONTHS = [
+    { label: 'gennaio', month: 0 },
+    { label: 'febbraio', month: 1 },
+    { label: 'marzo', month: 2 },
+    { label: 'aprile', month: 3 },
+    { label: 'maggio', month: 4 },
+    { label: 'giugno', month: 5 },
+    { label: 'luglio', month: 6 },
+    { label: 'agosto', month: 7 },
+    { label: 'settembre', month: 8 },
+    { label: 'ottobre', month: 9 },
+    { label: 'novembre', month: 10 },
+    { label: 'dicembre', month: 11 }
 ];
+
+function getMonthLastDay(month, year) {
+    return new Date(year, month + 1, 0).getDate();
+}
+
+const MAX_SEASON_DAY = 31;
+
+function createSeasonalEvents() {
+    return SEASONAL_MONTHS.flatMap(({ label, month }) => {
+        const lastDay = getMonthLastDay(month, new Date().getFullYear());
+        const firstRange = month === 0
+            ? { startDay: 5, endDay: 15 }
+            : { startDay: 1, endDay: Math.min(15, lastDay, MAX_SEASON_DAY) };
+
+        return [
+            {
+                id: `${label}1-seasons`,
+                month,
+                startDay: firstRange.startDay,
+                endDay: firstRange.endDay,
+                className: `${label}1-seasons`,
+                iconPath: 'images/icons/favicon.ico'
+            },
+            {
+                id: `${label}2-seasons`,
+                month,
+                startDay: 16,
+                endDay: Math.min(lastDay, MAX_SEASON_DAY),
+                className: `${label}2-seasons`,
+                iconPath: 'images/icons/favicon.ico'
+            }
+        ];
+    });
+}
+
+const events = createSeasonalEvents();
 
 // Template (può essere usato per aggiungere altri eventi o festività)
 const template_dummy = { // NON USARE, SERVE SOLO COME SEPARATORE. aggiungere in const holidays/events
@@ -510,32 +333,55 @@ function updateFaviconForEvent(event) {
     return;
 }
 
-// Crea l'effetto confetti per il tema Pesce d'Aprile.
-function launchAprilFoolsConfetti() {
+// Crea i coriandoli condivisi tra i temi che li utilizzano.
+function createConfettiOverlay(className, colors, count, getDelay, getDuration) {
     const overlay = document.createElement('div');
-    overlay.className = 'april-fools-confetti';
-    const colors = ['#ffeb3b', '#ff4081', '#40c4ff', '#76ff03', '#ffffff'];
+    overlay.className = className;
 
-    // Crea 18 pezzi di confetti con posizioni, dimensioni, colori e animazioni casuali.
-    for (let i = 0; i < 18; i++) {
+    for (let i = 0; i < count; i++) {
         const piece = document.createElement('span');
         piece.style.left = `${Math.random() * 100}%`;
         piece.style.top = `${-10 - Math.random() * 10}%`;
         piece.style.width = `${6 + Math.random() * 10}px`;
         piece.style.height = piece.style.width;
         piece.style.backgroundColor = colors[i % colors.length];
-        piece.style.animationDelay = `${Math.random() * 0.6}s`;
-        piece.style.animationDuration = `${2 + Math.random() * 1.5}s`;
+        piece.style.animationDelay = getDelay();
+        piece.style.animationDuration = getDuration();
         piece.style.opacity = `${0.8 + Math.random() * 0.2}`;
         overlay.appendChild(piece);
     }
-    // Aggiunge l'overlay dei confetti al body e lo rimuove dopo l'animazione.
+
     document.body.appendChild(overlay);
+    return overlay;
+}
+
+// Avvia i coriandoli temporanei del Pesce d'Aprile.
+function launchAprilFoolsConfetti() {
+    const overlay = createConfettiOverlay(
+        'april-fools-confetti',
+        ['#ffeb3b', '#ff4081', '#40c4ff', '#76ff03', '#ffffff'],
+        18,
+        () => `${Math.random() * 0.6}s`,
+        () => `${2 + Math.random() * 1.5}s`
+    );
+
+    // I coriandoli del Pesce d'Aprile svaniscono dopo la loro animazione.
     window.setTimeout(() => {
         overlay.style.transition = 'opacity 0.8s ease';
         overlay.style.opacity = '0';
         window.setTimeout(() => overlay.remove(), 800);
     }, 6500);
+}
+
+// Mantiene i coriandoli attivi durante il compleanno di Voidblock.
+function launchVoidblockBirthdayConfetti() {
+    createConfettiOverlay(
+        'voidblock-birthday-confetti',
+        ['#39d353', '#39c5ff', '#7cff8b', '#8be9ff', '#ffffff'],
+        36,
+        () => `${-Math.random() * 5}s`,
+        () => `${3 + Math.random() * 3}s`
+    );
 }
 
 // Crea un effetto neve esclusivo per il Natale.
@@ -573,6 +419,82 @@ function applySiteTheme() {
     // Aggiungi effetti speciali per eventi specifici.
     if (event.id === 'april-fools') {
         launchAprilFoolsConfetti();
+    }
+    if (event.id === 'voidblock-birthday') {
+        const title = document.querySelector('header h1');
+        if (title) {
+            const greeting = document.createElement('span');
+            greeting.className = 'voidblock-birthday-greeting';
+            greeting.textContent = 'Happy Birthday! ';
+
+            const voidName = document.createElement('span');
+            voidName.className = 'voidblock-birthday-void';
+            voidName.textContent = 'Void';
+
+            const blockName = document.createElement('span');
+            blockName.className = 'voidblock-birthday-block';
+            blockName.textContent = 'Block!';
+
+            title.replaceChildren(greeting, voidName, blockName);
+
+            const birthday = new Date();
+            const anniversary = new Date(birthday.getFullYear(), 10, 23);
+            // L'età aumenta soltanto il 23 novembre.
+            const years = birthday.getFullYear() - 2020 - (birthday < anniversary ? 1 : 0);
+            const subtitle = document.createElement('p');
+            subtitle.className = 'voidblock-birthday-subtitle';
+
+            const ageNumber = document.createElement('span');
+            ageNumber.className = 'voidblock-birthday-age';
+            ageNumber.textContent = `${years} `;
+
+            const yearsLabel = document.createElement('span');
+            yearsLabel.className = 'voidblock-birthday-years';
+            yearsLabel.textContent = 'Years ';
+
+            const oldLabel = document.createElement('span');
+            oldLabel.className = 'voidblock-birthday-old';
+            oldLabel.textContent = 'Old!!!';
+
+            subtitle.replaceChildren(ageNumber, yearsLabel, oldLabel);
+            title.insertAdjacentElement('afterend', subtitle);
+
+            // Ogni riga descrive un livello dell'isola; i simboli indicano il tipo di blocco.
+            const islandPixels = [
+                '....L....',
+                '...LLL...',
+                '....T....',
+                '....T....',
+                '.GGGGGGG.',
+                '..DDDDD..',
+                '...DDD...',
+                '....S....'
+            ];
+            const pixelTypes = {
+                L: 'leaves',
+                T: 'trunk',
+                G: 'grass',
+                D: 'dirt',
+                S: 'stone'
+            };
+            const island = document.createElement('a');
+            island.className = 'voidblock-birthday-island';
+            island.href = 'https://modrinth.com/datapack/voidblock-portable';
+            island.setAttribute('aria-label', 'Visita Voidblock su CurseForge');
+
+            for (const row of islandPixels) {
+                for (const pixel of row) {
+                    const block = document.createElement('span');
+                    block.className = pixel === '.'
+                        ? 'voidblock-birthday-island-empty'
+                        : `voidblock-birthday-island-pixel voidblock-birthday-island-${pixelTypes[pixel]}`;
+                    island.appendChild(block);
+                }
+            }
+
+            subtitle.insertAdjacentElement('afterend', island);
+        }
+        launchVoidblockBirthdayConfetti();
     }
     if (event.id === 'christmas') {
         launchChristmasSnow();
