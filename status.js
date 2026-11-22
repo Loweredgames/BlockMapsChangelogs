@@ -5,7 +5,8 @@ const SITE_STATUS = {
 
 if (SITE_STATUS.maintenanceMode) {
     const statusScript = document.currentScript;
-    const maintenanceUrl = new URL(SITE_STATUS.maintenancePage, statusScript.src);
+    const scriptUrl = statusScript?.src || window.location.href;
+    const maintenanceUrl = new URL(SITE_STATUS.maintenancePage, scriptUrl);
 
     if (window.location.pathname !== maintenanceUrl.pathname) {
         window.location.replace(maintenanceUrl.href);
