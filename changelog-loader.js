@@ -5,7 +5,7 @@
 // Qui puoi scegliere quale post in evidenzia mostrare in homepage.
 window.featuredPostConfig = {
     file: 'Voidblock/7.3.0/je-26.1.2-26.3-7.3.3_stable.md',
-    description: 'Scopri la nuova struttura misteriosa in giro nel mondo, festeggiamo il 5° compleanno della Voidblock tutti insieme, Adesso puoi anche fabbricare i blocchi erba nella nuova versione appena rilascita!!!'
+    description: 'Scopri la nuova struttura misteriosa in giro nel mondo, festeggiamo il 6° compleanno della Voidblock tutti insieme, Adesso puoi anche fabbricare i blocchi erba nella nuova versione appena rilascita!!!'
 };
 
 // ===================================
